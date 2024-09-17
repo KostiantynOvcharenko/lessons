@@ -19,7 +19,7 @@ h1{
     line-height: 200%;
     color: #ff0000bb;
     text-align: center;
-    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    text-shadow: 1px 1px 2px #ff0000d8, 0 0 1em #0000ffd3, 0 0 0.2em #0000ff;
     text-transform: uppercase;
 }
 .bold,
