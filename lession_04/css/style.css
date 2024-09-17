@@ -1,0 +1,111 @@
+@import url("nullstyle.css");
+@import url("fonts.css");
+
+
+@import url(https://fonts.googleapis.com/css?family=Manrope:regular,600,900&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:regular,600&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular,500&display=swap);
+@import url(https://fonts.googleapis.com/css?family=DM+Sans:regular,700&display=swap);
+
+body{
+    font-family: "Manrope";
+    font-size: 14px;
+    line-height: 114.285714%; /* 16/14 */
+    font-weight: 400;
+}
+h1{
+    font-size: 50px;
+    letter-spacing: 15px;
+    line-height: 200%;
+    color: #ff0000bb;
+    text-align: center;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    text-transform: uppercase;
+}
+[class*="__title"]{
+    font-weight: 600;
+}
+.bold{
+    font-weight: 600;
+}
+
+.text-boxes h2::first-letter{
+    color: ff0000bb;
+}
+
+/* Header */
+.header{
+    font-size: 32px;
+    line-height: 200%;
+    font-weight: 600;
+    letter-spacing: 10px;
+    color: #505F98;
+    text-align: right;
+    word-spacing: 50px
+} 
+
+/* Article */
+.article {
+    font-family: 'Source Sans Pro' ,Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+}
+.article__title {
+    text-decoration: underline;
+}
+.article__note {
+    font-style: italic;
+    font-size: 16px;
+}
+.article__content {
+    text-align: justify;
+}
+
+/* --article */
+
+/*  Personal portfolio */
+.text-box-01{
+    font-family: "Work Sans";
+    color: #132238;
+}
+.text-box-01__title{
+    font-size: 38px;
+    line-height: 131.578947%; /* 50/38 */
+} 
+.text-box-01__content{
+    font-size: 18px;
+    line-height: 133.333333%; /* 24/18 */
+}
+/* Landing page template */
+.text-box-02{
+    font-family: "Roboto";
+    color: #505F98;
+}
+.text-box-02__title{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 132%; /* 66/50 */
+    letter-spacing: 2%; /* 1/50 */
+    color: #091133;
+} 
+.text-box-02__content{
+    font-size: 18px;
+    line-height: 166.666667%; /* 30/18 */
+}
+
+/* Business presentation */
+.text-box-03{
+    font-family: "DM Sans";
+    color: #474464;
+}
+.text-box-03__title{
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 107.954545%; /* 95/88 */
+    color: #1E1B39;
+} 
+.text-box-03__content{
+    font-size: 24px;
+    line-height: 175%; /* 42/24 */
+    white-space: nowrap;
+}
