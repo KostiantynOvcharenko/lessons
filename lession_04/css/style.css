@@ -30,7 +30,7 @@ h1{
 }
 
 .text-boxes h2::first-letter{
-    color: ff0000bb;
+    color: #ff0000bb;
 }
 
 /* Header */
@@ -85,7 +85,6 @@ h1{
     font-size: 50px;
     font-weight: 500;
     line-height: 132%; /* 66/50 */
-    letter-spacing: 2%; /* 1/50 */
     color: #091133;
 } 
 .text-box-02__content{
