@@ -27,6 +27,7 @@ h1{
     font-weight: 600;
 }
 
+.article__content p::first-letter,
 .text-boxes h2::first-letter{
     color: #ff0000bb;
 }
