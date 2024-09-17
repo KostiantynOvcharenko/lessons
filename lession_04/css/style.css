@@ -22,10 +22,8 @@ h1{
     text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
     text-transform: uppercase;
 }
+.bold,
 [class*="__title"]{
-    font-weight: 600;
-}
-.bold{
     font-weight: 600;
 }
 
@@ -48,7 +46,7 @@ h1{
 .article {
     font-family: 'Source Sans Pro' ,Arial, Helvetica, sans-serif;
     font-size: 20px;
-    line-height: 25px;
+    line-height: 125%; /* 25/20 */
 }
 .article__title {
     text-decoration: underline;
