@@ -29,8 +29,8 @@ h1{
     font-weight: 600;
 }
 [class*="container"]{
-    max-width: 1440px;
-    padding-inline: 10px;
+    max-width: 1597px;
+    padding-inline: 20px;
     box-sizing: content-box;
     margin: 0 auto;
 }
@@ -156,7 +156,7 @@ h1{
     font-size: 24px;
     line-height: 175%; /* 42/24 */
 }
-
+/* Section 01 */
 .section-01{
     font-family: Roboto;
     margin-bottom: 50px;
@@ -185,6 +185,9 @@ h1{
     line-height: 166.666667%; /* 30/18 */
     margin: 0 0 76px 0;
 }
+.left .section-01__content p{
+    margin-bottom: 16px;
+}
 .section-01 .btn{
     font-size: 16px;
     font-weight: 500;
@@ -208,13 +211,19 @@ h1{
     line-height: 162.5%; /* 26/16 */
     margin-bottom: 70px;
 }
+.right .section-01__content p{
+    margin-bottom: 10px;
+}
+.section-01__items{
+    margin-inline: -15px;
+}
 .section-01__item{
     padding-inline: 15px;
-    margin-inline: -15px;
 }
 .little-box{
     display: inline-block;
     max-width: 245px;;
+    margin: 0 0 30px 0;
 }
 .little-box img{
     display: block;
@@ -233,7 +242,57 @@ h1{
     font-size: 12px;
     line-height: 150%; /* 18/12 */
 }
+/* Dark template section */
+.dark-template{
+    background-color: #141414;
+    font-family: Manrope;
+    padding-block: 150px;
+}
+.dark-template__title{
+    color: #fff;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 150%; /* 57px */    
+    margin: 0 0 14px 0;
+}
+.dark-template__subtytle{
+    max-width: 1297px;
+    color: #999;
+    font-size: 18px;
+    line-height: 150%;
+    margin: 0 0 80px 0;    
+}
+.dark-template__boxes{
+}
+.dark-template__box{
+    padding: 50px;
+    display: inline-block;
+    max-width: 33%;
+    min-width: 200px;
+}
+.dark-template__box-top{
+    vertical-align: middle;
+    padding-block: 18px;
+    margin: 0 0 30px 0;
+}
+.dark-template__box-top img{
+    padding-inline: 16px;
+}
+.dark-template__box-top h3{
+    vertical-align: middle;
+    display: inline-block;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%; /* 36px */
+}
+.dark-template__box-content{
+    color: #999;
+    font-size: 18px;
+    line-height: 150%; /* 27px */
+}
 
+/* --Dark template section */
 
 .footer{
     background: #fff;
