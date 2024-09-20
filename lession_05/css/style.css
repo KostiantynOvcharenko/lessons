@@ -103,15 +103,19 @@ h1{
 .text-boxes__box{
     margin: 0 0 50px 0;
     font-size: 0;
+    text-align: center;
 }
 .text-boxes__box img{
-    width: 35%;
+    min-width: 35%;
+    max-width: 100%;
 }
 .text-boxes__content{
+    text-align: left;
     vertical-align: bottom;
     padding-inline: 20px;
     display: inline-block;
-    width: 65%;
+    max-width: 65%;
+    min-width: 370px;
 }
 .text-boxes__content p{
     padding-block-end: 5px;
