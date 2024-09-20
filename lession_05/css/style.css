@@ -98,45 +98,51 @@ h1{
 
 /* --article */
 
+/* Introduses */
 /*  Personal portfolio */
-.text-boxes [class*=__content]{
-    display: inline-block;
-    width: 79%;
-    padding-inline: 10px;
-}
 .text-boxes__box{
     margin: 0 0 50px 0;
+    font-size: 0;
 }
-.text-boxes img{
+.text-boxes__box img{
+    width: 35%;
+}
+.text-boxes__content{
+    vertical-align: bottom;
+    padding-inline: 20px;
     display: inline-block;
-    width: 20%;
+    width: 65%;
+}
+.text-boxes__content p{
+    padding-block-end: 5px;
 }
 
 .text-box-01{
     font-family: "Work Sans";
     color: #132238;
 }
-.text-box-01__title{
-    font-size: 38px;
-    line-height: 131.578947%; /* 50/38 */
-} 
-.text-box-01__content{
-    margin: 0 auto;
+.text-box-01 p{
     font-size: 18px;
     line-height: 133.333333%; /* 24/18 */
 }
+.text-box-01 h2{
+    font-size: 38px;
+    line-height: 131.578947%; /* 50/38 */
+} 
+
+
 /* Landing page template */
 .text-box-02{
     font-family: "Roboto";
     color: #505F98;
 }
-.text-box-02__title{
+.text-box-02 h2{
     font-size: 50px;
     font-weight: 500;
     line-height: 132%; /* 66/50 */
     color: #091133;
 } 
-.text-box-02__content{
+.text-box-02 p{
     font-size: 18px;
     line-height: 166.666667%; /* 30/18 */
 }
@@ -146,24 +152,30 @@ h1{
     font-family: "DM Sans";
     color: #474464;
 }
-.text-box-03__title{
+.text-box-03 h2{
     font-size: 88px;
     font-weight: 700;
     line-height: 107.954545%; /* 95/88 */
     color: #1E1B39;
 } 
-.text-box-03__content{
+.text-box-03 p{
     font-size: 24px;
     line-height: 175%; /* 42/24 */
 }
+/* /Introduses */
+
+
 /* Section 01 */
 .section-01{
     font-family: Roboto;
     margin-bottom: 50px;
 }
+.section-01__container{
+    font-size: 0;
+}
 .section-01__wrapper{
     vertical-align: top;
-    min-width: 49%;
+    min-width: 50%;
     display: inline-block;
 }
 .section-01__box.left{
@@ -242,6 +254,8 @@ h1{
     font-size: 12px;
     line-height: 150%; /* 18/12 */
 }
+/* /Section 01 */
+
 /* Dark template section */
 .dark-template{
     background-color: #141414;
@@ -263,12 +277,13 @@ h1{
     margin: 0 0 80px 0;    
 }
 .dark-template__boxes{
+    font-size: 0;
 }
 .dark-template__box{
     padding: 50px;
     display: inline-block;
-    max-width: 33%;
-    min-width: 200px;
+    max-width: 33.33%;
+    min-width: 305px;
 }
 .dark-template__box-top{
     vertical-align: middle;
