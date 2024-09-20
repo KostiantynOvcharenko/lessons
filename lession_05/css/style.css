@@ -162,6 +162,10 @@ h1{
     line-height: 107.954545%; /* 95/88 */
     color: #1E1B39;
 } 
+.text-box-03 img{
+    max-width: 35%;
+    min-width: 0;
+}
 .text-box-03 p{
     font-size: 24px;
     line-height: 175%; /* 42/24 */
