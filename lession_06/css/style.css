@@ -223,9 +223,6 @@ body{
     border-radius: 12px;
     border: 1px solid var(--Black-15, #262626);
     background: linear-gradient(222deg, rgba(229, 0, 0, 0.50) -208.03%, rgba(229, 0, 0, 0.00) 41.32%), #0F0F0F;    
-
-    /* box-shadow: 4px 4px 8px 0px rgba(229, 0, 0, 0.2); */
-    /* box-shadow: 18px 23px 43px 10px rgba(229, 0, 0, 0.2); */
     box-shadow: -5px 0px 40px 26px rgba(229, 0, 0, 0.2);
 }
 .dark-template__box-top{
