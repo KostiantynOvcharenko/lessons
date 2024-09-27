@@ -1,0 +1,120 @@
+@import url("nullstyle.css");
+@import url(https://fonts.googleapis.com/css?family=DM+Sans:regular,700&display=swap);
+
+body{
+    font-family: "Manrope",Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 114.285714%; /* 16/14 */
+    font-weight: 400;
+    background-color: #000;
+    color: #fff;
+}
+[class*="__container"]{
+    max-width: 1440px;
+    padding-inline: 20px;
+    box-sizing: content-box;
+    margin: 0 auto;
+}
+
+.header{
+    padding-block: 10px;
+}
+.header__container{
+    font-size: 0;
+}
+.header__container >*{
+    display: inline-block;
+    vertical-align: middle;
+}
+.header__logo-ring{
+    width: 50px;
+    height: 50px;
+    background-color: blueviolet;
+    color: #fff;
+    border-radius: 50%;
+    vertical-align: baseline;
+    font-size: 24px;
+    font-weight: 700;
+    padding-block: 16px;
+}
+.header__logo-ring::before{
+    content: "07";
+    width: 100%;
+    text-align: center; 
+}
+.header__logo-text{
+    width: calc(100% - 50px);
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.header__logo-text h1{
+    width: fit-content;
+    margin: 0 auto;
+}
+/* Game */
+.main__game{
+
+}
+.game{
+
+}
+.game__container{
+
+}
+.game__canvas{
+}
+.game__paths{
+    width: 500px;
+    margin: 0 auto;
+    padding-block: 50px;
+}
+.game__path:not(:first-child){
+    visibility: hidden;
+}
+.game__path:hover,
+.game__path:hover+li{
+    visibility: visible;
+}
+.game__path:nth-child(n){
+    height: 30px;
+}
+.game__path:nth-child(2n){
+    height: 40px;
+    width: 30px;
+    writing-mode: vertical-rl;
+}
+.game__path:nth-child(4n+4){
+    /* margin: 0% auto; */
+    margin-block-end: 98%;
+}
+.game__path:nth-child(2n+1){
+}
+.game__path{
+    /* height: 10px; */
+    background: #fff;
+}
+.game__path:last-child,
+.game__path:first-child{
+    margin-left: 471px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding-block: 15px;
+    text-align: center;
+}
+.game__path:first-child{
+    margin-left: -9px;
+}
+.game__path:last-child::before,
+.game__path:first-child::before{
+    content: "WIN!";
+    color: #000;     
+}
+.game__path:first-child::before{
+    content: "START";
+}
+.game__container:has(.game__path:last-child:hover){
+    background: url(../img/winner.jpg) center / cover no-repeat;
+}
