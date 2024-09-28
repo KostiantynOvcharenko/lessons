@@ -9,16 +9,31 @@
 <body>
     <header class="header">
         <div class="header__container">
-            <div class="header__logo-ring"></div>
-            <div class="header__logo-text">
-                <h1>Lession 07</h1>
+            <div class="header__logo-ring"><span>Lession</span></div>
+            <div class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__item">
+                        <a href="#play-game">Play game</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#our-pricing-plans">Our pricing plans</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#project-timeline">Project timeline</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#agensy">Agensy</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </header>
     <main class="main">
-        <div class="main__wrapper">
+        <div class="wrapper">
+            <h1>Pseudoclasses and pseudo -elements</h1>
             <div class="main__game game">
-                <div class="game__container">
+                <div id="play-game" class="game__container">
+                    <h2>Play game</h2>
                     <div class="game__canvas">
                         <ul class="game__paths">
                             <li class="game__path"></li>
@@ -37,13 +52,108 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            
+            </div> <!--/Game-->
+            <div id="our-pricing-plans" class="main__pricing pricing">
+                <div class="pricing__container">
+                    <h2 class="pricing__title">Our pricing plans</h2>
+                    <div class="pricing__block">
+                        <div class="pricing__top">
+                            <h3 class="pricing__top-title">Basic</h3>
+                            <p class="pricing__price">$99</p>
+                            <h4 class="pricing__top-subtitle">Billed monthly</h4>
+                        </div>
+                        <ul class="pricing__list">
+                            <li class="pricing__item">All analytics features</li>
+                            <li class="pricing__item">Up to 250,000 tracked visits</li>
+                            <li class="pricing__item">Normal support</li>
+                            <li class="pricing__item">Up to 3 team members</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!---/Pricing--->
+            <div id="project-timeline" class="main__timeline timeline">
+                <div class="timeline__container">
+                    <div class="timeline__box">
+                        <div class="timeline__left">
+                            <h2 class="timeline__title">Project timeline</h2>
+                            <p class="timeline__text">Aliquet metus nunc turpis phasellus non amet vestibulumol gravida enim nonorbert blandit in egestas felis urna egetoler adipiscing lorem quam pulvinar.</p>
+                        </div>
+                        <div class="timeline__right">
+                            <ul class="timeline__list">
+                                <li class="timeline__item">
+                                    <div class="timeline__item-content">
+                                        <p class="timeline__overtitle">Jan 2023</p>
+                                        <h3 class="timeline__item-title">Research & discovery</h3>
+                                        <p class="timeline__item-text">Et arcu aliquam viverra felis rhoncus vitae arcu eget urna viverra massa nullaolmerolil fermentum congue ultrices.</p>
+                                    </div>
+                                </li>
+                                <li class="timeline__item">
+                                    <div class="timeline__item-content">
+                                        <p class="timeline__overtitle">Feb 2023</p>
+                                        <h3 class="timeline__item-title">Product development</h3>
+                                        <p class="timeline__item-text">Libero sed nibh dictumst viverra tincidunt nulla risusolm neque lorem sed elementum adipiscing purus massa.</p>
+                                    </div>
+                                </li>
+                                <li class="timeline__item">
+                                    <div class="timeline__item-content">
+                                        <p class="timeline__overtitle">Apr 2023</p>
+                                        <h3 class="timeline__item-title">Product launch</h3>
+                                        <p class="timeline__item-text">In diam aenean nunc amet faucibus commodo mattisole tincidunt euismod quis gravida tellus eros venenatis.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--/Timeline-->
+            <div id="agensy" class="main__agensy agensy">
+                <div class="agensy__container">
+                    <div class="agensy__main-image">
+                        <img src="img/agensy.png" alt="A man with a woman laughing at the workplace">
+                    </div>
+                    <div class="agensy__inner-container">
+                        <div class="agensy__desc">Agency provides a full service range including technical skills, design, business understanding.</div>
+                        <div class="agensy__text--01">
+                            <p>Outsource your digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you.</p>
+                        </div>
+                        <h2 class="agensy__block-title--01">Promote your product</h2>
+                        <div class="agensy__text--02">
+                            <p>Ability to put themselves in the merchant's shoes. It is meant to partner on the long run, and work as an extension of the merchant's team.</p>
+                        </div>
+                        <ul class="agensy__list--01">
+                            <li>Digital marketing</li>
+                            <li>Efforts instead</li>
+                            <li>Handling in-house</li>
+                        </ul>
+                        <div class="agensy__text--03">
+                            <p>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you.</p>
+                        </div>
+                        <h2 class="agensy__block-title--02">Service online and help</h2>
+                        <div class="agensy__text--04">
+                            <p>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you.</p>
+                        </div>
+                        <ul class="agensy__list--02">
+                            <li>1. Marketing efforts</li>
+                            <li>2. Instead of handling</li>
+                            <li>3. In-house</li>
+                        </ul>
+                        <div class="agensy__text--05">
+                            <p>Agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you.</p>
+                        </div>
+                        <div class="agensy__quote--01">
+                            <p>Provide your business with a variety of digital solutions to promote your product or service online and help you.</p>
+                        </div>
+                        <div class="agensy__text--06">
+                            <p>Agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--/Agensy-->
         </div>
     </main>
     <footer class="footer">
         <div class="footer__container">
-
+            <p>&copy; 2024 All rights are protected.The information is provided for educational purposes.</p>
         </div>
     </footer>
 </body>
