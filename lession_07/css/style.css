@@ -329,7 +329,6 @@ h1{
     font-family: Epilogue;
     font-size: 16px;
     line-height: 200%; /* 32/16 */
-    height: auto;
 }
 .agensy__container{
     max-width: 970px;
