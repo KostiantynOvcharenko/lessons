@@ -36,8 +36,8 @@
                 <div class="resilutions__container">
                     <h2 class="resilutions-image__title">Using pictures with different extension</h2>
                     <picture>
-                        <source srcset="img/webp/main-2x.webp 2x, img/webp/main-4x.webp 4x">
-                        <img class="resilutions-image__img" src="img/webp/main.webp" alt="A man in sunglasses on a dark background">
+                        <source srcset="img/webp/main.webp 1x,img/webp/main-2x.webp 2x, img/webp/main-4x.webp 4x">
+                        <img class="resilutions-image__img" src="img/main.jpg" alt="A man in sunglasses on a dark background">
                     </picture>                
                 </div>
             </div>
@@ -46,11 +46,17 @@
                     <h2 class="scales-image__title">One content picture with different scales</h2>
                     <div class="scales__img-boxes">
                             <div class="scales__img-box">
-                                <img class="scales-image__img" src="img/webp/main.webp" alt="A man in sunglasses on a dark background">
+                                <picture>
+                                    <source srcset="img/webp/main.webp" type="image/webp">
+                                <img class="scales-image__img" src="img/main-2x.jpg" alt="A man in sunglasses on a dark background">
+                                </picture>
                                 <span>main.webp</span>
                             </div>
                             <div class="scales__img-box">
-                                <img class="scales-image__img" src="img/webp/main-2x.webp" alt="A man in sunglasses on a dark background">
+                                <picture>
+                                    <source srcset="img/webp/main-4x.webp" type="image/webp">
+                                    <img class="scales-image__img" src="img/main-4x.jpg" alt="A man in sunglasses on a dark background">
+                                </picture>
                                 <span>main-2x.webp</span>
                             </div>
                             <div class="scales__img-box">
@@ -121,15 +127,24 @@
                 <div class="rastr__container">
                     <h2 class="rastr__title">Raster content drawing with a change in size</h2>
                     <div class="rastr__box-01">
-                        <img src="img/red-blue.webp" alt="Black and blue collage">
+                        <picture>
+                            <source srcset="img/red-blue.webp" type="image/webp">
+                            <img src="img/red-blue.jpg" alt="Black and blue collage">
+                        </picture>
                         <span>Original size</span>
                     </div>
                     <div class="rastr__box-02">
-                        <img src="img/red-blue.webp"  alt="Black and blue collage">
+                        <picture>
+                            <source srcset="img/red-blue.webp" type="image/webp">
+                            <img src="img/red-blue.jpg" alt="Black and blue collage">
+                        </picture>
                         <span>width: 300px</span>
                     </div>
                     <div class="rastr__box-03">
-                        <img src="img/red-blue.webp"  alt="Black and blue collage">
+                        <picture>
+                            <source srcset="img/red-blue.webp" type="image/webp">
+                            <img src="img/red-blue.jpg" alt="Black and blue collage">
+                        </picture>
                         <span>width: 1170px</span>
                     </div>
                 </div>
@@ -139,19 +154,19 @@
                     <h2 class="brands__title">Clients content images logotypes</h2>
                     <div class="brands__box">
                         <div class="brands__image">
-                            <img src="img/brands/digitalside.webp" alt="A digitalside company logotype">
+                            <img src="img/brands/digitalside.png" alt="A digitalside company logotype">
                         </div>
                         <div class="brands__image">
-                            <img src="img/brands/vortex.webp" alt="A vortex company logotype">
+                            <img src="img/brands/vortex.png" alt="A vortex company logotype">
                         </div>
                         <div class="brands__image">
-                            <img src="img/brands/travel-explorer.webp" alt="A travel explorer company logotype">
+                            <img src="img/brands/travel-explorer.png" alt="A travel explorer company logotype">
                         </div>
                         <div class="brands__image">
-                            <img src="img/brands/fuzion.webp" alt="A fusion company logotype">
+                            <img src="img/brands/fuzion.png" alt="A fusion company logotype">
                         </div>
                         <div class="brands__image">
-                            <img src="img/brands/media-fury.webp" alt="A media fury company logotype">
+                            <img src="img/brands/media-fury.png" alt="A media fury company logotype">
                         </div>
                     </div>
                 </div>
