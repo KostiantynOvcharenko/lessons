@@ -1,0 +1,215 @@
+@import url("nullstyle.css");
+/* @import url(https://fonts.googleapis.com/css?family=DM+Sans:regular,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Epilogue:regular,700&display=swap); */
+
+body{
+    font-family: "Manrope",Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 114.285714%; /* 16/14 */
+    font-weight: 400;
+    background-color: #000;
+    color: #fff;
+}
+[class*="__container"]{
+    max-width: 1170px;
+    padding-inline: 20px;
+    box-sizing: content-box;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.header{
+    padding-block: 10px;
+    margin: 0 0 50px 0;
+}
+.header__container{
+    font-size: 0;
+}
+.header__container >*{
+    display: inline-block;
+    vertical-align: middle;
+}
+.header__logo-ring{
+    font-size: 24px;
+    line-height: 100%;
+    font-weight: 700;
+    padding-block: 16px;
+}
+.header__logo-ring>*{
+    display: inline-block;
+    vertical-align: middle;
+}
+.header__logo-ring::before{
+    content: "08";
+    width: 50px;
+    height: 50px;
+    background-color: #8a2be2;
+    border-radius: 50%;
+    text-align: center;
+    padding-block: 13px;
+    margin-inline-end: 10px;
+}
+.header__nav{
+    width: 88%;
+}
+.header__menu{
+    width: fit-content;
+    margin: 0 auto;
+}
+.header__item:not(:last-child){
+    margin-inline-end: 10px;
+}
+.header__item:hover{
+    outline: 1px solid #fff;
+}
+.header__menu>li{
+    font-size: 16px;
+    display: inline-block;
+    text-decoration: underline;
+}
+[class^="main__"]{
+    padding-block: 50px;
+}
+h1{
+    text-transform: uppercase;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 100%;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+.footer__container{
+    width: fit-content;
+    margin: 0 auto;
+    padding-block: 8px;
+}
+[class*="__img"]{
+    max-width: 1170px;
+}
+h2[class*="__title"]{
+    font-size: 52px;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.main__alternate-image{}
+.alternate-image{}
+.alternate-image__container{}
+.alternate-image__title{}
+
+.main__scale-image{}
+.scale-image{}
+.scale-image__container{
+}
+.scale-image__title{}
+.scales__img-boxes{
+    font-size: 0;
+}
+.scales__img-box{
+    width: 33.33%;
+    display: inline-block;
+    overflow: hidden;
+}
+.scales__img-box span{
+    font-size: 16px;
+    font-weight: 1.5;
+    display: block;
+    padding-inline: 10px;
+}
+.scales-image__img{
+    margin-left: -436px;
+}
+
+.color-icons__box{
+    font-size: 0;
+}
+.color-icons__box ul{
+    display: inline-block;
+    width: 33.33%;
+}
+ul[class^="color-icons"]{
+    font-size: 0;
+}
+ul[class^="color-icons"] li{
+    display: inline-block;
+    width: 50%;
+}
+ul[class^="color-icons"] li a svg{
+    width: 32px;
+    height: 32px;
+}
+a svg:hover {
+}
+.color-icons__white li a svg path{
+    fill: #fff;
+}
+.color-icons__white li a:hover svg path{
+    stroke: #f00;
+}
+.color-icons__red li a svg path{
+    fill: #f00;
+}
+.color-icons__red li a:hover svg path{
+    stroke: #0f0;
+}
+.color-icons__green li a:hover svg path{
+    stroke: #00f;
+}
+.color-icons__green li a svg path{
+    fill: #00ff00;
+}
+.rastr__box-02 img{
+    width: 300px;
+}
+.rastr__box-03 img{
+    width: 1170px;
+}
+.brands{}
+.brands__box{
+    font-size: 0;
+}
+.brands__image{
+    display: inline-block;
+    width: 20%;
+}
+.gifts__box{
+    font-size: 0;
+    height: 148px;
+}
+.gifts__box>.gifts__item{
+    display: inline-block;
+    width: 33.33%;
+    vertical-align: middle;
+    padding-block: 55px;
+}
+.gifts__item{
+    background: url(../img/icons/star.svg) center no-repeat;
+}
+.gifts__item:nth-of-type(2){
+    background-size: 25%;
+}
+.gifts__item:nth-of-type(2) img{
+    width: 16px;
+}
+.gifts__item img{
+    display: block;
+    margin: 0 auto;
+}
+
+.contact-me__box{
+    background: url(../img/icons/path.svg)
+    center / 282px 242px no-repeat;
+    height: 336px;
+    padding-block: 53px;
+}
+.contact-me__item{
+    height: 285px;
+    width: fit-content;
+    margin: 0 auto;
+}
+.contact-me__item img{
+    height: 100%;
+}
+
+

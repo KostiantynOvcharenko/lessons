@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lession 08</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo-ring"><span>Lession</span></div>
+            <div class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__item">
+                        <a href="#home">Main page</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="wrapper">
+            <h1 id="home">WEB graphics</h1>
+            <div class="main__alternate-image alternate-image">
+                <div class="alternate-image__container">
+                    <h2 class="alternate-image__title">Using an alternative image format</h2>
+                    <picture>
+                        <source srcset="img/webp/main.webp" type="image/webp">
+                        <img class="alternate-image__img" src="img/main.png" alt="A man in sunglasses on a dark background">
+                    </picture>
+                </div>
+            </div>
+            <div class="main__resilutions resilutions">
+                <div class="resilutions__container">
+                    <h2 class="resilutions-image__title">Using pictures with different extension</h2>
+                    <picture>
+                        <source srcset="img/webp/main-2x.webp 2x, img/webp/main-4x.webp 4x">
+                        <img class="resilutions-image__img" src="img/webp/main.webp" alt="A man in sunglasses on a dark background">
+                    </picture>                
+                </div>
+            </div>
+            <div class="main__scales scales">
+                <div class="scales__container">
+                    <h2 class="scales-image__title">One content picture with different scales</h2>
+                    <div class="scales__img-boxes">
+                            <div class="scales__img-box">
+                                <img class="scales-image__img" src="img/webp/main.webp" alt="A man in sunglasses on a dark background">
+                                <span>main.webp</span>
+                            </div>
+                            <div class="scales__img-box">
+                                <img class="scales-image__img" src="img/webp/main-2x.webp" alt="A man in sunglasses on a dark background">
+                                <span>main-2x.webp</span>
+                            </div>
+                            <div class="scales__img-box">
+                                <img class="scales-image__img" src="img/webp/main-4x.webp" alt="A man in sunglasses on a dark background">
+                                <span>main-4x.webp</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main__color-icons color-icons">
+                <div class="color-icons__container">
+                    <h2 class="color-icons__title">Vector content graphics with color change</h2>
+                    <div class="color-icons__box">
+                        <ul class="color-icons__white">
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 0C11.3284 0 12 0.671573 12 1.5V3H36V1.5C36 0.671573 36.6716 0 37.5 0C38.3284 0 39 0.671573 39 1.5V3H42C45.3137 3 48 5.68629 48 9V42C48 45.3137 45.3137 48 42 48H6C2.68629 48 0 45.3137 0 42V9C0 5.68629 2.68629 3 6 3H9V1.5C9 0.671573 9.67157 0 10.5 0ZM40.362 9H7.635C6.735 9 6 9.672 6 10.5V13.5C6 14.328 6.732 15 7.635 15H40.365C41.265 15 42 14.328 42 13.5V10.5C42 9.672 41.268 9 40.362 9ZM32.562 24.438C33.1485 25.0245 33.1485 25.9755 32.562 26.562L23.562 35.562C23.2806 35.8441 22.8985 36.0027 22.5 36.0027C22.1015 36.0027 21.7194 35.8441 21.438 35.562L16.938 31.062C16.5586 30.6826 16.4104 30.1296 16.5493 29.6113C16.6882 29.093 17.093 28.6882 17.6113 28.5493C18.1296 28.4104 18.6826 28.5586 19.062 28.938L22.5 32.379L30.438 24.438C31.0245 23.8515 31.9755 23.8515 32.562 24.438Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="39" viewBox="0 0 48 39" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 0C17.0147 0 15 2.01472 15 4.5V6H4.5C2.01472 6 0 8.01472 0 10.5V14.652L22.842 20.742C23.6008 20.9441 24.3992 20.9441 25.158 20.742L48 14.652V10.5C48 8.01472 45.9853 6 43.5 6H33V4.5C33 2.01472 30.9853 0 28.5 0H19.5ZM19.5 3H28.5C29.3284 3 30 3.67157 30 4.5V6H18V4.5C18 3.67157 18.6716 3 19.5 3ZM4.5 39C2.01472 39 0 36.9853 0 34.5V17.55L23.613 23.841C23.8666 23.9087 24.1334 23.9087 24.387 23.841L48 17.55V34.5C48 36.9853 45.9853 39 43.5 39H4.5Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="color-icons__red">
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 0C11.3284 0 12 0.671573 12 1.5V3H36V1.5C36 0.671573 36.6716 0 37.5 0C38.3284 0 39 0.671573 39 1.5V3H42C45.3137 3 48 5.68629 48 9V42C48 45.3137 45.3137 48 42 48H6C2.68629 48 0 45.3137 0 42V9C0 5.68629 2.68629 3 6 3H9V1.5C9 0.671573 9.67157 0 10.5 0ZM40.362 9H7.635C6.735 9 6 9.672 6 10.5V13.5C6 14.328 6.732 15 7.635 15H40.365C41.265 15 42 14.328 42 13.5V10.5C42 9.672 41.268 9 40.362 9ZM32.562 24.438C33.1485 25.0245 33.1485 25.9755 32.562 26.562L23.562 35.562C23.2806 35.8441 22.8985 36.0027 22.5 36.0027C22.1015 36.0027 21.7194 35.8441 21.438 35.562L16.938 31.062C16.5586 30.6826 16.4104 30.1296 16.5493 29.6113C16.6882 29.093 17.093 28.6882 17.6113 28.5493C18.1296 28.4104 18.6826 28.5586 19.062 28.938L22.5 32.379L30.438 24.438C31.0245 23.8515 31.9755 23.8515 32.562 24.438Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="39" viewBox="0 0 48 39" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 0C17.0147 0 15 2.01472 15 4.5V6H4.5C2.01472 6 0 8.01472 0 10.5V14.652L22.842 20.742C23.6008 20.9441 24.3992 20.9441 25.158 20.742L48 14.652V10.5C48 8.01472 45.9853 6 43.5 6H33V4.5C33 2.01472 30.9853 0 28.5 0H19.5ZM19.5 3H28.5C29.3284 3 30 3.67157 30 4.5V6H18V4.5C18 3.67157 18.6716 3 19.5 3ZM4.5 39C2.01472 39 0 36.9853 0 34.5V17.55L23.613 23.841C23.8666 23.9087 24.1334 23.9087 24.387 23.841L48 17.55V34.5C48 36.9853 45.9853 39 43.5 39H4.5Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="color-icons__green">
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 0C11.3284 0 12 0.671573 12 1.5V3H36V1.5C36 0.671573 36.6716 0 37.5 0C38.3284 0 39 0.671573 39 1.5V3H42C45.3137 3 48 5.68629 48 9V42C48 45.3137 45.3137 48 42 48H6C2.68629 48 0 45.3137 0 42V9C0 5.68629 2.68629 3 6 3H9V1.5C9 0.671573 9.67157 0 10.5 0ZM40.362 9H7.635C6.735 9 6 9.672 6 10.5V13.5C6 14.328 6.732 15 7.635 15H40.365C41.265 15 42 14.328 42 13.5V10.5C42 9.672 41.268 9 40.362 9ZM32.562 24.438C33.1485 25.0245 33.1485 25.9755 32.562 26.562L23.562 35.562C23.2806 35.8441 22.8985 36.0027 22.5 36.0027C22.1015 36.0027 21.7194 35.8441 21.438 35.562L16.938 31.062C16.5586 30.6826 16.4104 30.1296 16.5493 29.6113C16.6882 29.093 17.093 28.6882 17.6113 28.5493C18.1296 28.4104 18.6826 28.5586 19.062 28.938L22.5 32.379L30.438 24.438C31.0245 23.8515 31.9755 23.8515 32.562 24.438Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="39" viewBox="0 0 48 39" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 0C17.0147 0 15 2.01472 15 4.5V6H4.5C2.01472 6 0 8.01472 0 10.5V14.652L22.842 20.742C23.6008 20.9441 24.3992 20.9441 25.158 20.742L48 14.652V10.5C48 8.01472 45.9853 6 43.5 6H33V4.5C33 2.01472 30.9853 0 28.5 0H19.5ZM19.5 3H28.5C29.3284 3 30 3.67157 30 4.5V6H18V4.5C18 3.67157 18.6716 3 19.5 3ZM4.5 39C2.01472 39 0 36.9853 0 34.5V17.55L23.613 23.841C23.8666 23.9087 24.1334 23.9087 24.387 23.841L48 17.55V34.5C48 36.9853 45.9853 39 43.5 39H4.5Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+
+                </div>
+            </div>
+            <div class="main__rastr rastr">
+                <div class="rastr__container">
+                    <h2 class="rastr__title">Raster content drawing with a change in size</h2>
+                    <div class="rastr__box-01">
+                        <img src="img/red-blue.webp">
+                        <span>Original size</span>
+                    </div>
+                    <div class="rastr__box-02">
+                        <img src="img/red-blue.webp">
+                        <span>width: 300px</span>
+                    </div>
+                    <div class="rastr__box-03">
+                        <img src="img/red-blue.webp">
+                        <span>width: 1170px</span>
+                    </div>
+                </div>
+            </div>
+            <div class="main__brands brands">
+                <div class="brands__container">
+                    <h2 class="brands__title">Clients content images logotypes</h2>
+                    <div class="brands__box">
+                        <div class="brands__image">
+                            <img src="img/brands/digitalside.webp" alt="A digitalside company logotype">
+                        </div>
+                        <div class="brands__image">
+                            <img src="img/brands/vortex.webp" alt="A vortex company logotype">
+                        </div>
+                        <div class="brands__image">
+                            <img src="img/brands/travel-explorer.webp" alt="A travel explorer company logotype">
+                        </div>
+                        <div class="brands__image">
+                            <img src="img/brands/fuzion.webp" alt="A fusion company logotype">
+                        </div>
+                        <div class="brands__image">
+                            <img src="img/brands/media-fury.webp" alt="A media fury company logotype">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main__gifts gifts">
+                <div class="gifts__container">
+                    <h2 class="gifts__title">Gift icon</h2>
+                    <div class="gifts__box">
+                        <div class="gifts__item">
+                            <img src="img/icons/gift-white-svg.svg" alt="">
+                        </div>
+                        <div class="gifts__item">
+                            <img src="img/icons/gift-white-svg.svg" alt="">
+                        </div>
+                        <div class="gifts__item">
+                            <img src="img/icons/gift-white-svg.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main__contact-me contact-me">
+                <div class="contact-me__container">
+                    <h2 class="contact-me__title">Vector design element image</h2>
+                    <div class="contact-me__box">
+                        <div class="contact-me__item">
+                            <img src="img/icons/block.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="main__social social">
+                <div class="social__container">
+                    <h2 class="social__title">Social icons</h2>
+                    <div class="social__box">
+                        <div class="social__item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="160" height="48" viewBox="0 0 160 48" fill="none">
+                                <circle cx="136" cy="24" r="24" fill="#EF6D58"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M136 16C133.827 16 133.556 16.0093 132.701 16.0493C129.795 16.1827 128.181 17.7947 128.048 20.7013C128.009 21.556 128 21.828 128 24C128 26.1733 128.009 26.4453 128.048 27.2987C128.181 30.204 129.795 31.8187 132.701 31.952C133.556 31.9907 133.827 32 136 32C138.173 32 138.445 31.9907 139.3 31.952C142.201 31.8187 143.821 30.2067 143.952 27.2987C143.991 26.4453 144 26.1733 144 24C144 21.828 143.991 21.556 143.952 20.7013C143.821 17.7987 142.207 16.1813 139.3 16.0493C138.445 16.0093 138.173 16 136 16ZM136 17.4427C138.136 17.4427 138.389 17.4507 139.233 17.4893C141.403 17.588 142.413 18.616 142.513 20.768C142.551 21.612 142.559 21.864 142.559 24C142.559 26.136 142.551 26.3893 142.513 27.232C142.413 29.3827 141.404 30.4133 139.233 30.512C138.389 30.5493 138.137 30.5587 136 30.5587C133.864 30.5587 133.611 30.5507 132.768 30.512C130.595 30.412 129.588 29.38 129.488 27.232C129.451 26.3893 129.441 26.136 129.441 24C129.441 21.864 129.451 21.6107 129.488 20.768C129.587 18.6147 130.597 17.5867 132.768 17.488C133.611 17.4493 133.864 17.4427 136 17.4427ZM131.892 24C131.892 21.7307 133.732 19.892 136 19.892C138.268 19.892 140.108 21.732 140.108 24C140.108 26.2693 138.268 28.108 136 28.108C133.732 28.108 131.892 26.2693 131.892 24ZM136 26.6667C134.527 26.6667 133.333 25.4733 133.333 24C133.333 22.528 134.527 21.3333 136 21.3333C137.472 21.3333 138.668 22.5267 138.668 24C138.668 25.4733 137.472 26.6667 136 26.6667ZM139.309 19.7307C139.309 19.2 139.74 18.7707 140.269 18.7707C140.801 18.7707 141.231 19.2 141.231 19.7307C141.231 20.2613 140.8 20.6907 140.269 20.6907C139.739 20.6907 139.309 20.26 139.309 19.7307Z" fill="white"/>
+                                <circle cx="80" cy="24" r="24" fill="#EF6D58"/>
+                                <path d="M88 19.54C87.412 19.8013 86.7787 19.9773 86.1147 20.0573C86.7933 19.6507 87.312 19.008 87.5587 18.2413C86.924 18.6173 86.2213 18.8907 85.4733 19.0373C84.876 18.3987 84.0213 18 83.0787 18C80.9587 18 79.4013 19.9773 79.88 22.0307C77.1533 21.8933 74.7333 20.5867 73.1147 18.6013C72.2547 20.076 72.6693 22.0067 74.1307 22.984C73.5933 22.9667 73.088 22.8187 72.6453 22.5733C72.6093 24.0933 73.7 25.516 75.2787 25.8333C74.8173 25.9587 74.3107 25.988 73.796 25.8893C74.2133 27.1933 75.428 28.1413 76.8627 28.168C75.48 29.2507 73.7427 29.7347 72 29.5293C73.4533 30.4613 75.1773 31.004 77.0307 31.004C83.1267 31.004 86.5693 25.856 86.3613 21.2387C87.004 20.7773 87.56 20.1987 88 19.54Z" fill="white"/>
+                                <circle cx="24" cy="24" r="24" fill="#EF6D58"/>
+                                <path d="M21.6667 21.3333H19V24H21.6667V32H25.6667V24H28.0933L28.3333 21.3333H25.6667V20.2227C25.6667 19.5853 25.7947 19.3333 26.4107 19.3333H28.3333V16H25.128C22.7307 16 21.6667 17.056 21.6667 19.0773V21.3333Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <p>&copy; 2024 All rights are protected.The information is provided for educational purposes.</p>
+        </div>
+    </footer>
+</body>
+</html>
