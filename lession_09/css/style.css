@@ -1,0 +1,93 @@
+@import url("nullstyle.css");
+@import url(https://fonts.googleapis.com/css?family=DM+Sans:regular,700&display=swap); 
+@import url(https://fonts.googleapis.com/css?family=Epilogue:regular,700&display=swap);
+
+body{
+    font-family: "Manrope",Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 114.285714%; /* 16/14 */
+    font-weight: 400;
+    background-color: #000;
+    color: #fff;
+}
+[class*="__container"]{
+    max-width: 1170px;
+    padding-inline: 20px;
+    box-sizing: content-box;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.header{
+    padding-block: 10px;
+    margin: 0 0 50px 0;
+}
+.header__container{
+    font-size: 0;
+}
+.header__container >*{
+    display: inline-block;
+    vertical-align: middle;
+}
+.header__logo-ring{
+    font-size: 24px;
+    line-height: 100%;
+    font-weight: 700;
+    padding-block: 16px;
+}
+.header__logo-ring>*{
+    display: inline-block;
+    vertical-align: middle;
+}
+.header__logo-ring::before{
+    content: "09";
+    width: 50px;
+    height: 50px;
+    background-color: #8a2be2;
+    border-radius: 50%;
+    text-align: center;
+    padding-block: 13px;
+    margin-inline-end: 10px;
+}
+.header__nav{
+    width: 85%;
+}
+.nav-main{
+}
+.nav-main__menu{
+    width: fit-content;
+    margin: 0 auto;
+}
+.nav-main__item{
+
+}
+.nav-main__item:hover{
+    color: #8a2be2;
+}
+.nav-main__item:not(:last-child){
+    margin-inline-end: 5px;
+}
+.nav-main__menu>li{
+    font-size: 16px;
+    display: inline-block;
+    text-decoration: underline;
+}
+.main__wrapper{
+    padding-block: 50px;
+}
+h1{
+    text-transform: uppercase;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 100%;
+    text-align: center;
+    margin: 0 auto 50px 0;
+}
+.footer__container{
+    width: fit-content;
+    margin: 0 auto;
+    padding-block: 8px;
+}
+.footer__nav{
+    margin-block-end: 10px;
+}
