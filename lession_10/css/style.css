@@ -18,8 +18,11 @@ body{
 }
 
 .header{
-    /* position: static; */
+    top: 0;
+    position: sticky;
+    background: #FDF0E9;
     padding-block: 10px;
+    z-index: 99;
 }
 .header__container{
     position: relative;
