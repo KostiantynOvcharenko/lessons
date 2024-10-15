@@ -35,11 +35,11 @@ body{
     height: 32px;
 }
 .logo img{
-	position: absolute;
-	inset-inline-start: 0;
-	inset-block-start: 0;
-	inline-size: 100%;
-	block-size: 100%;
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
     object-fit: cover;    
 }
 .header__title{
@@ -245,11 +245,11 @@ footer{
     border-inline: 8px solid #28293E;
 }
 .background{
-	position: absolute;
-	inset-inline-start: 0;
-	inset-block-start: 0;
-	inline-size: 100%;
-	block-size: 100%;
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
     object-fit: cover;
 }
 .cards__item .content{
