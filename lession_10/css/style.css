@@ -139,9 +139,9 @@ footer{
 .hero-colage >*{
     position: absolute;
 }
-.hero-colage >*:nth-child(1)~*{
-    /* display: none; */
-}
+/* .hero-colage >*:nth-child(1)~*{
+    display: none;
+} */
 .hero-colage__window{
     width: 43.157895%; /* 246/570 */
 
@@ -204,10 +204,6 @@ footer{
 
 
 /* Portfolio */
-.portfolio{}
-.portfolio--dark{}
-.portfolio__container{
-}
 .portfolio__one{
     position: relative;
 }
