@@ -340,6 +340,7 @@ footer{
     bottom: 11.111111%; /* 64/576 */
     /* top: 72.222222%; 416/576 */
     left: 10.572687%; /* 48/454 */
+    right: 10.572687%; /* 48/454 */
 }
 .cards__item .content__title{
     font-size: 40px;
