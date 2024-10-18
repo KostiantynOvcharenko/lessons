@@ -101,10 +101,10 @@ footer{
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    /* background: radial-gradient(circle, #fff 0%, #fff 20%, 
+    background: radial-gradient(circle, #fff 0%, #fff 20%, 
         #aaa 20%, #999 25%, #aaa 30%,
         #000 30%, #333 50%, 
-        #000 70%, transparent 70%); */
+        #000 70%, transparent 70%);
     background: radial-gradient(circle, #000 0%, #333 50%, #000 100%);
 }
 .wheel::after{
