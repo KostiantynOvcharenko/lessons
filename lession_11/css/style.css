@@ -60,19 +60,66 @@ footer{
     margin: 200px auto;
 }
 
+
+
+
+/* Tractor */
 .tractor{
+    position: relative;
     width: 500px;
     aspect-ratio: 350/120;
+    background-color: #fff;
+    perspective: 400px;
 }
 
 .tractor__body{
-    width: 100%;
-    height: 100%;
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;    
+    width: 87.4%; /* 437/500 */
+    aspect-ratio: 437 / 150;
     background: #f75c2e;
-    border-top-left-radius: 50%;
+    border-top-left-radius: 63%;
+    border-bottom-left-radius: 30%;
+    margin: 0 auto;
+    transform: skew(34deg,0);
+}
+.tractor__body::before{
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 10;
+}
+/* Fara */
+.tractor__fara{
+    position: absolute;
+    top: 73px;
+    left: 9px;
+    height: 30px;
+    aspect-ratio: 1 / 2;
+    transform: rotate(-23deg);
+    background: black;
+    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: linear-gradient(to left, yellow, white);
 }
 
+/* hodova */
+.tractor__hodova{
+    position: absolute;
+    left: 26%;
+    bottom: 12%;
+    width: 38%;
+    height: 48%;
+    background-color: #000;
+    transform: skewX(-32deg);
+    transition: unset;
+    border-radius: 10px;
+    background: linear-gradient(#000, #222);
+}
+/* Wheel */
 .tractor__wheel{
     bottom: -52px;
     left: 2%;
@@ -101,10 +148,10 @@ footer{
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background: radial-gradient(circle, #fff 0%, #fff 20%, 
+    /* background: radial-gradient(circle, #fff 0%, #fff 20%, 
         #aaa 20%, #999 25%, #aaa 30%,
         #000 30%, #333 50%, 
-        #000 70%, transparent 70%);
+        #000 70%, transparent 70%); */
     background: radial-gradient(circle, #000 0%, #333 50%, #000 100%);
 }
 .wheel::after{
