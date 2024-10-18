@@ -1,0 +1,204 @@
+@import url("nullstyle.css");
+
+@import url(https://fonts.googleapis.com/css?family=Epilogue:regular,800,900&display=swap);
+
+body{
+    font-family: "Epilogue", sans-serif;
+    font-size: 16px;
+    line-height: 200%; /* 32/16 */
+    font-weight: 400;
+    background: #FDF0E9;
+    color: rgba(57, 20, 0, 0.64);
+}
+[class*="__container"]{
+    max-width: 1170px;
+    padding-inline: 20px;
+    box-sizing: content-box;
+    margin: 0 auto;
+}
+
+.header{
+    top: 0;
+    position: sticky;
+    background: #FDF0E9;
+    padding-block: 10px;
+    z-index: 99;
+}
+.header__container{
+    position: relative;
+}
+.logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+}
+.logo img{
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;    
+}
+.header__title{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 900;
+}
+footer{
+    text-align: center;
+}
+
+.main{
+    padding-block: 50px;
+}
+.main__tractor{
+    margin: 200px auto;
+}
+
+.tractor{
+    width: 500px;
+    aspect-ratio: 350/120;
+}
+
+.tractor__body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #f75c2e;
+    border-top-left-radius: 50%;
+}
+
+.tractor__wheel{
+    bottom: -52px;
+    left: 2%;
+}
+.tractor__wheel.wheel--rear{
+    left: 56%;
+    width: 44%;
+}
+.wheel{
+    position: absolute;
+    width: 31%;
+    aspect-ratio: 1;
+    z-index: 1;
+    border-radius: 50%;
+    border: 7px dashed #000;
+}
+.wheel.wheel--rear::before{
+    width: 103%;
+}
+.wheel::before{
+    content: '';
+    position: absolute;
+    width: 106%;
+    aspect-ratio: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    /* background: radial-gradient(circle, #fff 0%, #fff 20%, 
+        #aaa 20%, #999 25%, #aaa 30%,
+        #000 30%, #333 50%, 
+        #000 70%, transparent 70%); */
+    background: radial-gradient(circle, #000 0%, #333 50%, #000 100%);
+}
+.wheel::after{
+    /* display: none; */
+    content: '';
+    position: absolute;
+    width: 50%;
+    aspect-ratio: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, #aaa 60%, #fff 75%, #000 100%);
+}
+.wheel__disk{
+    position: absolute;
+    width: 46%;
+    aspect-ratio: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(#aaa 50%, transparent 50%, #aaa 75%) ;
+    background-color: #333;
+    z-index: 1;
+}
+.wheel__disk::after{
+    content: '';
+    position: absolute;
+    width: 60%;
+    aspect-ratio: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #fff;
+    
+}
+.wheel__bolts{
+    position: absolute;
+    width: 33%;
+    aspect-ratio: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.wheel__bolts span{
+    position: absolute;
+    width: 20%;
+    aspect-ratio: 1;
+    background: #aaa;
+    border-radius: 50%;
+}
+.wheel__bolts.wheel__bolts--rotated{
+    transform: translate(-50%, -50%) rotate(45deg);
+
+}
+.wheel__bolts span:nth-of-type(1){
+    top: 0;
+    left: 0;
+}
+.wheel__bolts span:nth-of-type(2){
+    top: 0;
+    right: 0;
+}
+.wheel__bolts span:nth-of-type(3){
+    bottom: 0;
+    left: 0;
+}
+.wheel__bolts span:nth-of-type(4){
+    bottom: 0;
+    right: 0;
+}
+.wheel__hole{
+    position: absolute;
+    width: 20%;
+    aspect-ratio: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;    
+    background: #aaa;
+    border-radius: 50%;
+
+}
+
+.tractor__cabine{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 58%;
+    height: 140%;
+    top: -75%;
+    right: 0;
+    border: 1px solid #000;
+}
