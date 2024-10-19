@@ -82,7 +82,7 @@ footer{
 /* Tractor */
 .main__tractor-first{
     position: absolute;
-    left: 27%;
+    left: 36%;
     top: 60%;
     width: 40%;
 }
@@ -98,6 +98,9 @@ footer{
 .main__tractor-second .wheel.wheel--rear::before{
     width: 115%;
 }
+.main__tractor-second .tractor__cabina::before {
+    bottom: -90%;
+}
 .main__tractor-third{
     position: absolute;
     right: 1%;
@@ -109,6 +112,9 @@ footer{
 }
 .main__tractor-third .wheel.wheel--rear::before{
     width: 141%;
+}
+.main__tractor-third .tractor__cabina::before {
+    bottom: -102%;
 }
 
 .tractor{
@@ -185,19 +191,19 @@ footer{
 .tractor__radiator span:not(:last-of-type){
     margin-bottom: 13%;
 }
-
+/* Cabina */
 .tractor__cabina{
     position: absolute;
     top: -70%; /* -122/171 */
     right: 15.4%; /* 77/500 */
     width: 41%;
     height: 105%;
-    background-color: #c5e3ee;
     overflow: hidden;
     border-bottom: 8px solid #000;
     clip-path: polygon(16% 0%, 95% 0%, 100% 75%, 50% 100%, 0% 101%, 0% 69%);
 }
 .tractor__cabina::before{
+    
     content: '';
     position: absolute;
     bottom: -74%;
@@ -207,6 +213,28 @@ footer{
     aspect-ratio: 1;
     background: #000;
 }
+.tractor__cabina::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+    background-color: #c5e3ee;
+    z-index: -1;
+}
+.tractor__salon{
+    position: absolute;
+    width: 100%;
+    height: 31%;
+    bottom: 0;
+    left: 0;
+    background: #c5e3ee;
+    border-top: 5px solid #000;
+    z-index: -2;
+}
+
 .tractor__cabina span{
     position: absolute;
     left: 50%;
@@ -235,14 +263,19 @@ footer{
     left: -5%;
     top: 71%;
 }
-.tractor__cabina span:nth-of-type(5)~span{
-    opacity: .5;
+.tractor__cabina span:nth-of-type(5){
+    left: 44%;
+    top: 22%;
+    width: 1.4%;
+    transform: rotate(-90deg);}
+.tractor__cabina span:nth-of-type(6)~span{
+    z-index: -2;
 }
-.tractor__cabina span:nth-of-type(6){
+.tractor__cabina span:nth-of-type(7){
     left: 81%;
     transform: rotate(-3deg);
 }
-.tractor__cabina span:nth-of-type(7){
+.tractor__cabina span:nth-of-type(8){
     left: 40%;
 }
 .tractor__torpeda{
@@ -251,11 +284,11 @@ footer{
     top: 56.976744%; /* 98/172 */
     width: 26%;
     height: 32%;
-    opacity: .5;
     background-color: #000;
     border-top-right-radius: 33%;
     border-bottom-right-radius: 33%;
     transform: rotate(-23deg);
+    z-index: -2;
 }
 .tractor__torpeda div{
     position: absolute;
