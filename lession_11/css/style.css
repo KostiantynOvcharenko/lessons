@@ -170,7 +170,7 @@ footer{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     background: linear-gradient(to left, yellow, white);
-    box-shadow: 0 7px 11px;
+    box-shadow: 1px 7px 15px;
 }
 .tractor__radiator{
     position: absolute;
