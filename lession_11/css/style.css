@@ -310,7 +310,7 @@ footer{
 
 .tractor__roof{
     position: absolute;
-    top: -78%; /* -133/192 */
+    top: -75%; /* -133/192 */
     left: 49%; /* 244/197 */
     width: 35%;
     height: 10%;
