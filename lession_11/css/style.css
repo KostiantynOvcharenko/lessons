@@ -130,10 +130,25 @@ footer{
     bottom: -102%;
 }
 
+
+
+/* Tractor */
 .tractor{
     position: relative;
     aspect-ratio: 350/120;
     background-color: transparent;
+}
+.tractor:hover{
+    animation: go 3s linear;
+}
+@keyframes go {
+    0% {
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+    
 }
 .tractor__body{
     position: absolute;
@@ -146,6 +161,7 @@ footer{
     border-bottom-left-radius: 30%;
     margin: 0 auto;
     transform: skew(34deg,0);
+    clip-path: polygon(0 0, 60.9% 0, 52.3% 43%, 91% 43%, 83% 100%, 0% 100%);
     overflow: hidden;
 }
 .tractor__body.tractor__body--dark{
@@ -175,9 +191,6 @@ footer{
     border-left: 3px solid #000;
     border-radius: 5px;
     transform: skewX(30deg);
-}
-.tractor__kapot::after{
-
 }
 .tractor__kapot span{
     position: absolute;
@@ -212,7 +225,7 @@ footer{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     background: linear-gradient(to left, #777, white);
-    box-shadow: 1px 1px 1px;
+    box-shadow: 1px 1px 1px #555;
 }
 .tractor__fara:hover{
     animation: liteFara 3s ease;
@@ -296,6 +309,7 @@ footer{
     height: 98%;
     /* transform-style: preserve-3d; */
     perspective: 1000px;
+    z-index: 2;
 }
 .door{
     position: absolute;
@@ -405,7 +419,6 @@ footer{
     content: '';
     position: absolute;
     inset: 0;
-    z-index: -1;
     background: #c5e3ee;
     opacity: .4;
     clip-path: polygon(16% 0%, 95% 0%, 100% 75%, 50% 100%, 0% 101%, 0% 69%);
@@ -477,7 +490,7 @@ footer{
     width: 3.5%;
 }
 .tractor__cabine span:nth-of-type(6)~span{
-    z-index: -2;
+    /* z-index: -2; */
 }
 .tractor__cabine span:nth-of-type(7){
     left: 81%;
@@ -551,7 +564,6 @@ footer{
     height: 69%;
     border-top-right-radius: 10px;
     background: linear-gradient(to right, #888, #000);
-    z-index: -1;
 }
 .tractor__tube span{
     position: absolute;
@@ -658,6 +670,18 @@ footer{
     transform: translate(-50%, -50%);
     border-radius: 50%;
     background: radial-gradient(circle, #aaa 60%, #fff 75%, #000 100%);
+}
+.wheel:hover{
+    /* transform: rotate(-360deg); */
+    animation: wheel-rotate 3s linear;
+}
+@keyframes wheel-rotate{
+    0% {
+        transform: rotate(0);
+    } 
+    100%{
+        transform: rotate(-360deg);
+    }
 }
 .wheel__disk{
     position: absolute;
