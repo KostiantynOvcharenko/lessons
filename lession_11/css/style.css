@@ -139,7 +139,7 @@ footer{
     background-color: transparent;
 }
 .tractor:hover{
-    animation: go 3s linear;
+    /* animation: go 3s linear; */
 }
 @keyframes go {
     0% {
