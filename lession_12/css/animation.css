@@ -1,0 +1,116 @@
+
+/* go-second */
+@keyframes go-second{
+    0%{
+        transform: translateY(0) rotateY(180deg);
+    }
+    100%{
+        transform: translate(700%) rotateY(180deg);
+    }
+}
+/* go-third */
+@keyframes go-third{
+    0%{
+        transform: translate(0, 0%);
+    }
+    50%{
+        transform: translate(-700%,  0%);
+    }
+    100%{
+        transform: translate(-1450%, 100%);
+    }
+}
+/* go */
+@keyframes go {
+    0% {
+        transform: translateX(0%) rotateY(0deg);
+    }
+    50%{
+        transform: translateX(-200%) rotateY(0deg);
+    }
+    51%{
+        transform: translateX(-200%) rotateY(180deg);
+    }
+    100%{
+        transform: translateX(50%) rotateY(180deg);
+    }
+    
+}
+/* liteFara */
+@keyframes liteFara {
+    0% {
+        background: linear-gradient(to left, #777, white);
+    }
+    .1%, 99.9% {
+        background: linear-gradient(to left, yellow, white);
+    }
+    100% {
+        background: linear-gradient(to left, #777, white);
+    }
+}
+/* open-door */
+@keyframes open-door{
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(-120deg);
+    }
+}
+/* open-close-door */
+@keyframes open-close-door {
+    0% {
+        transform: rotateY(0deg);
+    }
+    20%, 80% {
+        transform: rotateY(-120deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+/* wheel-rotate */
+@keyframes wheel-rotate{
+    0% {
+        transform: rotate(0);
+    } 
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+/* first */
+.main__tractor-first{
+    --first-delay: 5s;
+    --first-duration: 13s;
+    animation: go var(--first-duration) cubic-bezier(.21,-0.27,.55,1.07) var(--first-delay) forwards;
+}
+.main__tractor-first .wheel{
+    animation: wheel-rotate 3s linear 4 backwards var(--first-delay);
+}
+.main__tractor-first .tractor__fara{
+    background: linear-gradient(to left, #777, white);
+    animation: liteFara 15s linear 4s;
+}
+.main__tractor-first .tractor__door{
+    transform-origin: left center;
+    animation: open-door 1s ease 20s forwards;
+}
+
+/* second */
+.main__tractor-second{
+    animation: go-second 20s linear forwards;
+}
+.main__tractor-second .wheel{
+    animation: wheel-rotate 2s linear 10 backwards;
+}
+
+/* third */
+.main__tractor-third{
+    animation: go-third 30s linear forwards;
+
+}
+.main__tractor-third .wheel{
+    animation: wheel-rotate 2s linear 15 forwards;
+}
+
