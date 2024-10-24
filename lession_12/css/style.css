@@ -79,16 +79,350 @@ footer{
     height: 100%;
     object-fit: cover;    
 }
-/* Driver */
-.main__driver{
+
+
+
+
+/* driver */
+.main__person{
+    position: absolute;
+    right: 99px;
+    bottom: 100px;
+    width: 16%;
+    aspect-ratio: 1 / 1;
+}
+.driver{
+    width: 100%;
+    height: 100%;
+    
+}
+.driver__body{
+    position: absolute;
+    top: 29%;
+    left: 45%;
+    width: 60%;
+    /* aspect-ratio: 1;
+    background-color: #029a08;
+    border-radius: 83% 17% 46% 54% / 42% 17% 83% 58%;
+    transform: rotate(-45deg) translate(-25%, -25%); */
+}
+
+/* arm */
+
+.driver__arm,
+.driver__arm-wrist,
+.driver__arm-finger,
+.driver__leg,
+.driver__leg-shin{
+    aspect-ratio: 1;
+    background-color: #029a08;
+    border-radius: 93% 7% 71% 29% / 68% 7% 93% 32%;
+    transform: rotate(-45deg) translate(-25%, -25%);
+}
+.driver__arm::before,
+.driver__arm-wrist::before,
+.driver__arm-finger::before,
+.driver__leg::before,
+.driver__leg-shin::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 93% 7% 71% 29% / 68% 7% 93% 32%;
+    background: radial-gradient(circle at bottom right, transparent 0%, transparent 50%, #000 100%);
+    opacity: 0.4;
+}
+.driver__arm::after,
+.driver__arm-wrist::after,
+.driver__arm-finger::after,
+.driver__leg::after,
+.driver__leg-shin::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 93% 7% 71% 29% / 68% 7% 93% 32%;
+    background: radial-gradient(circle at top left, transparent 0%, transparent 70%, #000 100%);
+    /* background: linear-gradient(to right top, #000 0%, transparent 15%, transparent 100%); */
+    opacity: .5;
+}
+
+.driver__body .driver__arm{
+    position: absolute;
+    left: 87%;
+    top: -22%;
+    width: 38%;
+    aspect-ratio: 1;
+    transform-origin: left bottom;
+    transform: rotate(-169deg);
+    z-index: 1;
+}
+.driver__arm-wrist{
+    position: absolute;
+    left: 82%;
+    top: -14%;
+    width: 75%;
+    aspect-ratio: 1;
+    transform: rotate(53deg);
+}
+.driver__arm-finger{
+    position: absolute;
+    position: absolute;
+    width: 15%;
+    aspect-ratio: 1;
+    left: 158%;
+    top: 32%;
+    transform: rotate(-44deg);
+}
+.driver__arm-finger:nth-of-type(2){
+    left: 157%;
+    top: 41%;
+    transform: rotate(-44deg);
+}
+.driver__arm-finger:nth-of-type(3){
+    left: 171%;
+    top: 27%;
+    transform: rotate(-102deg);
+}
+.driver__arm-finger:nth-of-type(4){
+    left: 172%;
+    top: 15%;
+    transform: rotate(-129deg);
+}
+.driver__arm-finger:nth-of-type(5){
+    left: 164%;
+    top: 6%;
+    transform: rotate(-192deg);
+}
+.leg-shin{
+    position: absolute;
+    left: 52%;
+    top: 16%;
+    width: 38%;
+    height: 38%;
+    transform: rotate(185deg);
+}
+/* leg */
+.driver__body .driver__leg{
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    width: 38%;
+    height: 38%;
+    transform-origin: left bottom;
+    transform: rotate(-160deg);
+    z-index: 1;
+    transition: transform 1s;
+}
+.driver__body .driver__leg:hover{
+    /* transform: rotate(-360deg); */
+}
+.driver__leg-shin{
+    position: absolute;
+    left: 68%;
+    top: -48%;
+    width: 75%;
+    aspect-ratio: 1;
+    transform-origin: left bottom;
+    transform: rotate(-20deg);
+}
+.driver__leg-foot{
+    position: absolute;
+    left: 161%;
+    top: -90%;
+    width: 60%;
+    aspect-ratio: 1;
+    background-color: #000;
+    border-radius: 93% 7% 71% 29% / 68% 7% 93% 32%;
+    transform-origin: left bottom;
+    transform: rotate(-104deg);
+}
+.driver__leg-foot::before{
+    content: '';
+    position: absolute;
+    left: -5%;
+    top: 50%;
+    width: 26%;
+    aspect-ratio: 4 / 1;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: rotate(-80deg);
+}
+.driver__leg-foot::after{
+    content: '';
+    position: absolute;
+    left: 63%;
+    top: -1%;
+    width: 53%;
+    height: 48%;
+    background-color: #000;
+    border-radius: 20%;
+    transform: rotate(-58deg);
+}
+
+
+/* hed */
+.driver-hed{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30%;
+}
+.driver__body,
+.driver-hed{
+    aspect-ratio: 1;
+    background-color: #029a08;
+    border-radius: 83% 17% 46% 54% / 42% 17% 83% 58%;
+    transform: rotate(-45deg) translate(-25%, -25%);
+}
+.driver__body::before,
+.driver-hed::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 83% 17% 46% 54% / 42% 17% 83% 58%;
+    background: radial-gradient(circle at bottom right, #000 0%, #000 15%, transparent 100%);
+    opacity: 0.4;
+}
+.driver__body::after,
+.driver-hed::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 83% 17% 46% 54% / 42% 17% 83% 58%;
+    background: linear-gradient(to right top, #000 0%, #000 18%, transparent 50%, transparent 100%);
+    opacity: .5;
+}
+.driver-hed__eye{
+    position: absolute;
+    left: 56%;
+    top: 5%;
+    height: 10%;
+    aspect-ratio: 2 / 1;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: rotate(-1deg);
+}
+.driver-hed__pupil{
     position: absolute;
     left: 0;
     top: 0;
-    width: 25%;
-    aspect-ratio: 1;
-    background-color: #f75c2e;
-    border-radius: 83% 17% 46% 54% / 42% 17% 83% 58%;
+    height: 80%;
+    aspect-ratio: 2 / 1;
+    border-radius: 50%;
+    background-color: #000;
+    transform: rotate(-1deg);
+
 }
+.driver-hed__pupil::after{
+    content: '';
+    position: absolute;
+    left: 46%;
+    top: 6%;
+    height: 42%;
+    aspect-ratio: 2 / 1;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: rotate(24deg);
+}
+.driver-hed__cap{
+    position: absolute;
+    top: -16%;
+    left: 90%;
+    width: 9%;
+    aspect-ratio: 1 / 5;
+    background-color: blue;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+}
+.driver-hed__cap::before{
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -50%;
+    width: 80%;
+    aspect-ratio: 1 / 5;
+    background-color: #000;
+    background: linear-gradient(to left, #000 0%, #333 85%, #555 100%);
+    border-radius: 20%;
+}
+.driver-hed__cap::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(to left, #000 0%, transparent 100%);
+    opacity: .3;
+}
+.driver-hed__badge{
+    position: absolute;
+    left: -22%;
+    top: 6%;
+    width: 69%;
+    aspect-ratio: 2 / 1;
+    background-color: yellow;
+    border-radius: 50%;
+    transform: rotate(-26deg);
+}
+.driver-hed__nose{
+    position: absolute;
+    top: -7%;
+    left: 29%;
+    width: 20%;
+    aspect-ratio: 1;
+    background-color: #029a08;
+    border-radius: 100% 0% 60% 40% / 71% 76% 24% 29%;
+    transform: rotate(45deg);
+    overflow: hidden;
+}
+.driver-hed__nose::before{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: -15%;
+    width: 129%;
+    height: 200%;
+    border-radius: 83% 17% 46% 54% / 42% 17% 83% 58%;
+    background: radial-gradient(circle at bottom left, #000 0%, #000 15%, transparent 100%);
+    opacity: 0.4;
+}
+.driver-hed__mouth{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+}
+.driver-hed__mouth::after{
+    content: '';
+    position: absolute;
+    left: 10%;
+    top: -37%;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #000;
+    border-radius: 50%;
+}
+
+.driver-hed__ear{
+    position: absolute;
+    left: 57%;
+    top: 43%;
+    width: 30%;
+    height: 30%;
+    overflow: hidden;
+    transform: rotate(-45deg);
+}
+.driver-hed__ear::after{
+    content: '';
+    position: absolute;
+    left: 10%;
+    top: -37%;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #000;
+    border-radius: 50%;
+}
+
 
 /* Tractor */
 .main__tractor-first{
@@ -405,6 +739,18 @@ footer{
     z-index: -1;
     transform: perspective(43px) rotateX(1deg);
     background-color: #c5e3ee;
+}
+/* driver */
+.tractor__person{
+    position: absolute;
+    left: -8%;
+    top: 64%;
+    width: 58%;
+    transform: rotate(-6deg);
+}
+.tractor__person .driver-hed{
+    left: 91px;
+    top: -53px;
 }
 .tractor__salon{
     display: none;
