@@ -214,6 +214,7 @@
         transform: scale(1);
     }
 }
+
 /* driver */
 .main__person .driver{
     animation: driver-went 6s linear forwards; 
