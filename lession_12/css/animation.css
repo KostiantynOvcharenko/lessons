@@ -5,7 +5,7 @@
         transform: translateY(0) rotateY(180deg);
     }
     100%{
-        transform: translate(700%) rotateY(180deg);
+        transform: translate(900%) rotateY(180deg);
     }
 }
 /* go-third */
@@ -38,12 +38,12 @@
 }
 /* liteFara */
 @keyframes liteFara {
-    0% {
-        background: linear-gradient(to left, #777, white);
-    }
-    .1%, 99.9% {
+    0%, 99.9% {
         background: linear-gradient(to left, yellow, white);
     }
+    /* 99.9% {
+        background: linear-gradient(to left, yellow, white);
+    } */
     100% {
         background: linear-gradient(to left, #777, white);
     }
@@ -62,11 +62,14 @@
     0% {
         transform: rotateY(0deg);
     }
-    20%, 80% {
+    10%{
         transform: rotateY(-120deg);
     }
-    100% {
+    20%,90% {
         transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(-120deg);
     }
 }
 /* wheel-rotate */
@@ -78,10 +81,9 @@
         transform: rotate(-360deg);
     }
 }
-
 /* first */
 .main__tractor-first{
-    --first-delay: 5s;
+    --first-delay: 11s;
     --first-duration: 13s;
     animation: go var(--first-duration) cubic-bezier(.21,-0.27,.55,1.07) var(--first-delay) forwards;
 }
@@ -90,11 +92,11 @@
 }
 .main__tractor-first .tractor__fara{
     background: linear-gradient(to left, #777, white);
-    animation: liteFara 15s linear 4s;
+    animation: liteFara 15s linear 10s;
 }
 .main__tractor-first .tractor__door{
     transform-origin: left center;
-    animation: open-door 1s ease 20s forwards;
+    animation: open-close-door 23s ease forwards 5s;
 }
 
 /* second */
@@ -108,9 +110,161 @@
 /* third */
 .main__tractor-third{
     animation: go-third 30s linear forwards;
-
 }
 .main__tractor-third .wheel{
     animation: wheel-rotate 2s linear 15 forwards;
 }
 
+
+
+/* driver */
+@keyframes driver-arm-step{
+    0%{
+        transform: rotate(-169deg);
+    }
+    50%{
+        transform: rotate(-220deg);
+    }
+    100%{
+        transform: rotate(-169deg);
+    }
+}
+@keyframes driver-leg-step{
+    0%{
+        transform: rotate(-180deg);
+    }
+    25%{
+        transform: rotate(-140deg);
+    }
+    75%{
+        transform: rotate(-210deg);
+    }
+    100%{
+        transform: rotate(-180deg);
+    }
+}
+@keyframes driver-shin-step{
+    0%{
+        transform: rotate(-60deg);
+    }
+    25%,50%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: rotate(-60deg);
+    }
+}
+@keyframes driver-went{
+    0%{
+        transform: translate(0%, 0%) scale(1);
+    }
+    6.25%{
+        transform: translate(-10%, 10%) scale(1);
+    }
+    12.5%{
+        transform: translate(-20%, 0%) scale(1);
+    }
+    18.75%{
+        transform: translate(-30%, 10%) scale(1);
+    }
+    25%{
+        transform: translate(-40%, 0%) scale(1);
+    }
+    31.25%{
+        transform: translate(-50%, 10%) scale(1);
+    }
+    37.5%{
+        transform: translate(-60%, 0%) scale(1);
+    }
+    43.75%{
+        transform: translate(-70%, 10%) scale(1);
+    }
+    50%{
+        transform: translate(-80%, 0%) scale(1);
+    }
+    56.25%{
+        transform: translate(-90%, 10%) scale(1);
+    }
+    62.50%{
+        transform: translate(-100%, 0%) scale(1);
+    }
+    68.75%{
+        transform: translate(-110%, 10%) scale(1);
+    }
+    75%{
+        transform: translate(-120%, 0%) scale(1);
+    }
+    81.25%{
+        transform: translate(-130%, 10%) scale(1);
+    }
+    87.50%{
+        transform: translate(-140%, 0%) scale(1);
+    }
+    93.75%{
+        transform: translate(-150%, 10%) scale(1);
+    }
+    100%{
+        /* transform: translate(-160%, 0%) scale(.5); */
+        transform: translate(-224%, -73.4%) scale(0) rotate(11deg);
+    }
+}
+@keyframes driver-to-car{
+    0%,90%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}
+/* driver */
+.main__person .driver{
+    animation: driver-went 6s linear forwards; 
+}
+.main__tractor-first .tractor__person .driver{
+    animation: driver-to-car 7s linear forwards; 
+}
+.main__person .driver__body .arm{
+    animation: driver-arm-step 1.5s linear 4 forwards;
+}
+.main__person .driver__body .leg{
+    animation: driver-leg-step 1.5s linear 4 forwards;
+}
+.main__person .leg__shin{
+    animation: driver-shin-step 1.5s linear 4 forwards;
+}
+.main__person .driver__body .leg.leg--rear{
+    z-index: -1;
+    animation: driver-leg-step 1.5s linear 4 reverse forwards;
+}
+@keyframes running-line {
+    0% {
+        transform: translateX(360%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }    
+}
+h2 span{
+    animation: running-line 20s linear infinite;
+}
+
+@keyframes remove-header{
+    0%,99%{
+        transform: translateY(-100%);
+    }100%{
+        transform: translateY(0%);
+    }
+}
+.header{
+    animation: remove-header 28s forwards;
+}
+@keyframes remove-footer{
+    0%,99%{
+        transform: translateY(100%);
+    }100%{
+        transform: translateY(0%);
+    }
+}
+.footer{
+    animation: remove-footer 28s forwards;
+}

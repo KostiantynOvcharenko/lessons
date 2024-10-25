@@ -1,0 +1,87 @@
+@keyframes face-smile {
+    0% {
+        transform: translate(0%, 0%);
+
+    }100%{
+        transform: translate(26%, 32%);
+    }
+}
+@keyframes mouth-smile {
+    0% {
+        transform: translate(0%, 0%) rotate(0deg) scale(0);
+
+    }100%{
+        transform: translate(-46%, -15%) rotate(34deg) scale(1.5);
+    }
+}
+@keyframes eye-smile {
+    0% {
+        transform: translate(0%, 0%) rotate(0deg) scale(0);
+        
+    }100%{
+        transform: translate(-4%, -4%) rotate(-70deg) scale(1);
+    }
+}
+@keyframes rear-eye-smile{
+    0%{
+        transform: translate(0%, 0%) rotate(-1deg) scale(0);
+    }100%{
+        transform: translate(-21%, 21%) rotateY(-180deg) rotate(-165deg) scale(1)
+    }
+}
+@keyframes ear-smile {
+    0% {
+        transform: translate(0%, 0%) rotate(0deg) scale(0);
+        
+    }100%{
+        transform: translate(-10%, -104%) rotate(-66deg) scale(1);
+    }
+}
+@keyframes rare-ear-smile {
+    0% {
+        transform: translate(0%, 0%) rotate(0deg) scale(0);
+        
+    }100%{
+        transform: translate(-82%, -185%) rotate(154deg) scale(1);
+    }
+}
+@keyframes nose-smile {
+    0% {
+        transform: translate(0%, 0%) rotate(45deg) skew(0deg, 0deg) scale(0);
+        
+    }100%{
+        transform: translate(-57%, 37%) rotate(-18deg) skew(29deg, -14deg) scale(1);
+    }
+}
+@keyframes bage-smile {
+    0% {
+        transform: translate(0%, 0%) rotate(-26deg) scale(0);
+    }100%{
+        transform: translate(0%, 495%) rotate(0deg) scale(1);
+    }
+}
+
+.driver__body .head__face--front.head__face{
+    animation: face-smile 1s forwards 26s
+}
+.driver__body .head__face--front .head__mouth{
+    animation: mouth-smile 1s forwards 26s
+}
+.head__face--front .head__eye{
+    animation: eye-smile 1s forwards 26s
+}
+.head__face--rear .head__eye{
+    animation: rear-eye-smile 1s forwards 26s
+}
+.head__face--front .head__ear{
+    animation: ear-smile 1s forwards 26s
+}
+.head__face--rear .head__ear{
+    animation: rare-ear-smile 1s forwards 26s
+}
+.head__face--front .head__nose{
+    animation: nose-smile 1s forwards 26s
+}
+.head__badge{
+    animation: bage-smile 1s forwards 26s
+}
