@@ -83,12 +83,10 @@
 }
 /* first */
 .main__tractor-first{
-    --first-delay: 11s;
-    --first-duration: 13s;
-    animation: go var(--first-duration) cubic-bezier(.21,-0.27,.55,1.07) var(--first-delay) forwards;
+    animation: go 13s cubic-bezier(.21,-0.27,.55,1.07) 11s forwards;
 }
 .main__tractor-first .wheel{
-    animation: wheel-rotate 3s linear 4 backwards var(--first-delay);
+    animation: wheel-rotate 3s linear 4 backwards 11s;
 }
 .main__tractor-first .tractor__fara{
     background: linear-gradient(to left, #777, white);
@@ -213,7 +211,7 @@
         transform: scale(0);
     }
     100%{
-        transform: scale(100%);
+        transform: scale(1);
     }
 }
 /* driver */
