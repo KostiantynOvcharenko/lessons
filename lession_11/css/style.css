@@ -1,4 +1,6 @@
 @import url("nullstyle.css");
+/* @import url("animation.css");
+@import url("smile-animation.css"); */
 
 @import url(https://fonts.googleapis.com/css?family=Epilogue:regular,800,900&display=swap);
 
@@ -12,6 +14,7 @@ body{
 }
 main{
     position: relative;
+    overflow: hidden;
 }
 [class*="__container"]{
     max-width: 1170px;
@@ -20,17 +23,26 @@ main{
     margin: 0 auto;
 }
 h2{
+    white-space: nowrap;
+    overflow: hidden;    
+    padding-block: 20px;
     position: absolute;
-    top: 51px;
-    left: 28px;
+    top: 0;
+    left: 1%;
+    right: 1%;
+    width: 98%;
     font-size: 36px;
     font-weight: 600;
     color: #fff;
     z-index: 10;
 }
+h2 span{
+    display: inline-block;
+}
 .header{
     top: 0;
-    position: sticky;
+    position: absolute;
+    inset-inline: 0;
     background: #fff;
     padding-block: 10px;
     z-index: 99;
@@ -61,13 +73,18 @@ h2{
     font-weight: 900;
 }
 footer{
+    position: absolute;
+    bottom: 0;
+    inset-inline: 0;
     text-align: center;
+    color: #fff;
 }
 
 .canvas{
     width: 100%;
-    height: 95vh;
+    height: 100vh;
     position: relative;
+    z-index: -99;
 }
 .canvas img{
     position: absolute;
@@ -79,12 +96,395 @@ footer{
 }
 
 
+
+
+/* driver */
+.main__person{
+    position: absolute;
+    right: -9%;
+    /* right: 20%; */
+    bottom: 20%;
+    width: 16%;
+    aspect-ratio: 1 / 1;
+    z-index: 5;
+}
+.driver{
+    width: 100%;
+    height: 100%;
+    
+}
+.driver__body{
+    position: absolute;
+    top: 29%;
+    left: 45%;
+    width: 60%;
+    /* aspect-ratio: 1;
+    background-color: #029a08;
+    border-radius: 83% 17% 46% 54% / 42% 17% 83% 58%;
+    transform: rotate(-45deg) translate(-25%, -25%); */
+}
+
+/* arm */
+
+.arm,
+.arm__wrist,
+.arm__finger,
+.arm__first,
+.leg,
+.leg__shin{
+    aspect-ratio: 1;
+    background-color: #029a08;
+    border-radius: 93% 7% 71% 29% / 68% 7% 93% 32%;
+    transform: rotate(-45deg) translate(-25%, -25%);
+}
+.arm::before,
+.arm__wrist::before,
+.arm__finger::before,
+.arm__first::before,
+.leg::before,
+.leg__shin::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 93% 7% 71% 29% / 68% 7% 93% 32%;
+    background: radial-gradient(circle at bottom right, transparent 0%, transparent 50%, #000 100%);
+    opacity: 0.4;
+}
+.arm::after,
+.arm__wrist::after,
+.arm__finger::after,
+.arm__first::after,
+.leg::after,
+.leg__shin::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 93% 7% 71% 29% / 68% 7% 93% 32%;
+    background: radial-gradient(circle at top left, transparent 0%, transparent 70%, #000 100%);
+    /* background: linear-gradient(to right top, #000 0%, transparent 15%, transparent 100%); */
+    opacity: .5;
+}
+
+.arm{
+    position: absolute;
+    left: 87%;
+    top: -22%;
+    width: 38%;
+    aspect-ratio: 1;
+    transform-origin: left bottom;
+    /* transform: rotate(-123deg); */
+    transform: rotate(-169deg);
+    z-index: 1;
+}
+.arm__wrist{
+    position: absolute;
+    left: 82%;
+    top: -14%;
+    width: 75%;
+    aspect-ratio: 1;
+    transform: rotate(53deg);
+}
+.arm__first{
+    position: absolute;
+    width: 40%;
+    height: 35%;
+    left: 76%;
+    top: -9%;
+    transform: rotate(96deg);
+}
+.arm__finger{
+    position: absolute;
+    width: 15%;
+    aspect-ratio: 1;
+    width: 15%;
+    aspect-ratio: 1;
+    left: 97%;
+    top: -19%;
+    transform: rotate(-177deg);
+}
+.arm__finger:nth-of-type(2){
+    left: 103%;
+    top: 21%;
+    transform: rotate(-44deg);
+}
+.arm__finger:nth-of-type(3){
+    left: 104%;
+    top: 2%;
+    transform: rotate(-165deg);
+}
+.arm__finger:nth-of-type(4){
+    left: 100%;
+    top: -8%;
+    transform: rotate(-176deg);
+}
+.arm__finger:nth-of-type(5){
+    left: 164%;
+    top: 6%;
+    transform: rotate(-192deg);
+}
+/* leg */
+.leg{
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    width: 38%;
+    height: 38%;
+    transform-origin: left bottom;
+    transform: rotate(-180deg);
+    z-index: 1;
+    background: linear-gradient(to right top,#f75c2e 44%, #029a08 45%);
+}
+.leg:hover{
+    /* transform: rotate(-360deg); */
+}
+.leg__shin{
+    position: absolute;
+    left: 76%;
+    top: -48%;
+    width: 75%;
+    aspect-ratio: 1;
+    transform-origin:  10% 60%;
+    transform: rotate(-9deg);
+}
+.leg__foot{
+    position: absolute;
+    left: 154%;
+    top: -20%;
+    width: 60%;
+    aspect-ratio: 1;
+    background-color: #000;
+    border-radius: 93% 7% 71% 29% / 68% 7% 93% 32%;
+    transform-origin: left bottom;
+    transform: rotate(-95deg);
+}
+.leg__foot::before{
+    content: '';
+    position: absolute;
+    left: -5%;
+    top: 50%;
+    width: 26%;
+    aspect-ratio: 4 / 1;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: rotate(-80deg);
+}
+.leg__foot::after{
+    content: '';
+    position: absolute;
+    left: 63%;
+    top: -1%;
+    width: 53%;
+    height: 62%;
+    background-color: #000;
+    border-radius: 20%;
+    transform: rotate(-37deg);
+}
+
+
+/* hed */
+
+.head__face,
+.driver__body::before,
+.driver__body,
+.driver__body::after,
+.head::before,
+.head,
+.head::after{
+    aspect-ratio: 1;
+    background-color: #029a08;
+    border-radius: 83% 17% 46% 54% / 42% 17% 83% 58%;
+}
+.head{
+    position: absolute;
+    top: -38%;
+    left: 82%;
+    width: 54%;
+    /* overflow: hidden; */
+}
+.head__face{
+    position: absolute;
+    inset: 0;
+    background-color: transparent;
+}
+.driver__body{
+    transform: rotate(-45deg);
+    background: linear-gradient(to top right, #f75c2e 0%, #f75c2e 36%, #029a08 37%, #029a08 100%);
+}
+
+
+.driver__body::before,
+.head::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at bottom right, #000 0%, #000 15%, transparent 100%);
+    opacity: 0.4;
+}
+/* .driver__body::before{
+    background: radial-gradient(circle at bottom right, #000 0%, #000 15%, transparent 100%), line-height (to top right, #f75c2e 0%, #f75c2e 36%, #029a08 37%, #029a08 100%);
+} */
+.driver__body::after,
+.head::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right top, #000 0%, #000 18%, transparent 50%, transparent 100%);
+    opacity: .5;
+}
+.head__eye{
+    position: absolute;
+    left: 56%;
+    top: 5%;
+    height: 10%;
+    aspect-ratio: 2 / 1;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: rotate(-1deg);
+}
+.head__pupil{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 80%;
+    aspect-ratio: 2 / 1;
+    border-radius: 50%;
+    background-color: #000;
+    transform: rotate(-1deg);
+
+}
+.head__pupil::after{
+    content: '';
+    position: absolute;
+    left: 46%;
+    top: 6%;
+    height: 42%;
+    aspect-ratio: 2 / 1;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: rotate(24deg);
+}
+.head__cap{
+    position: absolute;
+    top: -16%;
+    left: 90%;
+    width: 9%;
+    aspect-ratio: 1 / 5;
+    background-color: blue;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+}
+.head__cap::before{
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -50%;
+    width: 80%;
+    aspect-ratio: 1 / 5;
+    background-color: #000;
+    background: linear-gradient(to left, #000 0%, #333 85%, #555 100%);
+    border-radius: 20%;
+}
+.head__cap::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(to left, #000 0%, transparent 100%);
+    opacity: .3;
+}
+.head__badge{
+    position: absolute;
+    left: -22%;
+    top: 6%;
+    width: 69%;
+    aspect-ratio: 2 / 1;
+    background-color: yellow;
+    border-radius: 50%;
+    transform: rotate(-26deg);
+}
+
+.head__nose::before,
+.head__nose{
+    border-radius: 100% 0% 60% 40% / 71% 76% 24% 29%;
+}
+.head__nose{
+    position: absolute;
+    top: -7%;
+    left: 29%;
+    width: 20%;
+    aspect-ratio: 1;
+    background-color: #029a08;
+    transform: rotate(45deg);
+    overflow: hidden;
+}
+.head__nose::before{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: -15%;
+    width: 129%;
+    height: 200%;
+    background: radial-gradient(circle at bottom left, #000 0%, #000 15%, transparent 100%);
+    opacity: 0.4;
+}
+.head__mouth{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+}
+.head__mouth::after{
+    content: '';
+    position: absolute;
+    left: 10%;
+    top: -37%;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #000;
+    border-radius: 50%;
+}
+
+.head__ear{
+    position: absolute;
+    left: 57%;
+    top: 43%;
+    width: 30%;
+    height: 30%;
+    overflow: hidden;
+    transform: rotate(-45deg);
+}
+.head__ear::after{
+    content: '';
+    position: absolute;
+    left: 10%;
+    top: -37%;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #000;
+    border-radius: 50%;
+}
+
+
 /* Tractor */
 .main__tractor-first{
     position: absolute;
     left: 36%;
-    top: 60%;
+    top: 50%;
     width: 40%;
+}
+/* Second tractor */
+.main__tractor-second .head__nose,
+.main__tractor-second .arm,
+.main__tractor-second .arm__wrist,
+.main__tractor-second .arm__finger,
+.main__tractor-second .arm__first,
+.main__tractor-second .leg,
+.main__tractor-second .leg__shin,
+.main__tractor-second .driver__body,
+.main__tractor-second .head{
+    background-color: yellow;
 }
 .main__tractor-second{
     position: absolute;
@@ -92,6 +492,7 @@ footer{
     top: 63%;
     width: 12%;
     transform: rotateY(180deg);
+    z-index: -1;
 }
 .main__tractor-second .tractor__wing::before,
 .main__tractor-second .tractor__body,
@@ -107,11 +508,26 @@ footer{
 .main__tractor-second .tractor__cabine::before {
     bottom: -90%;
 }
+
+
+.main__tractor-third .head__nose,
+.main__tractor-third .arm,
+.main__tractor-third .arm__wrist,
+.main__tractor-third .arm__finger,
+.main__tractor-third .arm__first,
+.main__tractor-third .leg,
+.main__tractor-third .leg__shin,
+.main__tractor-third .driver__body,
+.main__tractor-third .head{
+    background-color: #f75c2e;
+}
 .main__tractor-third{
     position: absolute;
-    right: 1%;
+    right: 10%;
     top: 56%;
     width: 7%;
+    z-index: -2;
+
 }
 .main__tractor-third .tractor__wing::before,
 .main__tractor-third .tractor__body,
@@ -137,18 +553,6 @@ footer{
     position: relative;
     aspect-ratio: 350/120;
     background-color: transparent;
-}
-.tractor:hover{
-    /* animation: go 3s linear; */
-}
-@keyframes go {
-    0% {
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(-50%);
-    }
-    
 }
 .tractor__body{
     position: absolute;
@@ -224,24 +628,10 @@ footer{
     border-radius: 5px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    background: linear-gradient(to left, #777, white);
+    /* background: linear-gradient(to left, #777, white); */
+    background: linear-gradient(to left, yellow, white);
     box-shadow: 1px 1px 1px #555;
 }
-.tractor__fara:hover{
-    animation: liteFara 3s ease;
-}
-@keyframes liteFara {
-    0% {
-        background: linear-gradient(to left, #777, white);
-    }
-    20%, 80% {
-        background: linear-gradient(to left, yellow, white);
-    }
-    100% {
-        background: linear-gradient(to left, #777, white);
-    }
-}
-
 .tractor__radiator{
     position: absolute;
     left: 9.5%; /* 76/800 */
@@ -320,25 +710,7 @@ footer{
     clip-path: polygon(0% 68%, 31% 0%, 100% 0%, 100% 57%, 83% 64%, 77% 70%, 71% 75%, 68% 79%, 64% 87%, 61% 100%, 0 100%);
     z-index: 1;
     /* transform: rotate3d(-8, 23, 3, -48deg) translateY(12px); */
-    transition: transform .3s;
-    transform-origin: left center;
-}
-.door:hover{
-    /* transform: rotate3d(-8, 23, 3, -48deg) translateY(12px) translate(-34px, -27px); */
-    /* transform: rotate3d(-1, 118, 3, -148deg) translateY(12px) translate(162px, -9px); */
-    animation: openDoor 3s ease-in-out forwards;
-
-}    
-@keyframes openDoor {
-    0% {
-        transform: rotateY(0deg);
-    }
-    20%, 80% {
-        transform: rotateY(-120deg);
-    }
-    100% {
-        transform: rotateY(0deg);
-    }
+    /* transition: 1s; */
 }
 .door::before{
     content: '';
@@ -529,6 +901,37 @@ footer{
     transform: rotate(92deg);
     background: #000;
 }
+/* driver */
+.tractor__person{
+    position: absolute;
+    left: -16%;
+    top: 62%;
+    width: 69%;
+    transform: rotate(9deg);
+    z-index: 1;
+}
+.tractor__person .head{
+    left: 71%;
+    top: -46%;
+    transform: rotate(-18deg);
+}
+.tractor__person .arm{
+    transform: rotate(-160deg);    
+}
+.tractor__person .arm__wrist{
+    transform: rotate(108deg);    
+}
+.tractor__person .leg{
+    transform: rotate(-85deg);
+}
+.tractor__person .leg__shin{
+    /* left: 76%;
+    top: -19%;
+    width: 75%;
+    aspect-ratio: 1;
+    transform-origin: 10% 60%; */
+    transform: rotate(-92deg);
+}
 
 .tractor__roof{
     /* display: none; */
@@ -586,7 +989,7 @@ footer{
     aspect-ratio: 2 / 1;
     overflow: hidden;
     border-radius: 10px;
-    z-index: 1;
+    z-index: 3;
 }
 
 .tractor__wing::before{
@@ -632,6 +1035,7 @@ footer{
 .tractor__wheel.wheel--rear{
     left: 56%;
     width: 44%;
+    z-index: 3;
 }
 .wheel{
     position: absolute;
@@ -670,18 +1074,6 @@ footer{
     transform: translate(-50%, -50%);
     border-radius: 50%;
     background: radial-gradient(circle, #aaa 60%, #fff 75%, #000 100%);
-}
-.wheel:hover{
-    /* transform: rotate(-360deg); */
-    animation: wheel-rotate 3s linear;
-}
-@keyframes wheel-rotate{
-    0% {
-        transform: rotate(0);
-    } 
-    100%{
-        transform: rotate(-360deg);
-    }
 }
 .wheel__disk{
     position: absolute;
