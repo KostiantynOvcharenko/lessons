@@ -184,7 +184,8 @@ h6 span{
     font-size: 14px;
     font-weight: 900;
     line-height: 100%; /* 14/14 */
-    text-transform: uppercase;    
+    text-transform: uppercase;
+    transition: .3s;
 }
 .btn:hover{
     border-radius: 6px;
