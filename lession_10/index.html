@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lession 10</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 </head>
 <body>
@@ -19,14 +19,20 @@
         </header>
         <main class="main">
             <!-- Hero -->
-            <div class="hero  hero--dark">
+            <section class="hero  hero--dark">
                 <div class="hero__container">
                     <div class="hero__one">
                         <img class="hero__asterisk" src="images/modern_studio/multy-star.svg" alt="Asterisk with multiple rays">
-                        <div class="content">
+                        <div class="content -trans">
                             <h2 class="content__over-title">Modern Studio</h2>
-                            <h3 class="content__title">We’re Help To<br> Build Your<br> Dream Project</h3>
-                            <p class="content__text">Agency provides a full service range including technical<br> skills, design, business understanding.</p>
+                            <h3 class="content__title">
+                                <span>We’re Help To</span>
+                                <span> Build Your</span>
+                                <span> Dream Project</span>
+                            </h3>
+                            <div class="content__text">
+                                <p>Agency provides a full service range including technical<br> skills, design, business understanding.</p>
+                            </div>  
                         </div>
                         <div class="link-group">
                             <a href="#" class="btn">How We Work</a>
@@ -34,7 +40,7 @@
                         </div>
                     </div>
                     <div class="hero__two">
-                        <div class="hero-colage">
+                        <div class="hero-colage -trans">
                             <div class="hero-colage__window hero-colage__window--violet">
                                 <img src="images/modern_studio/laptop.png" alt="laptop">
                             </div>
@@ -52,14 +58,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- portfolio -->
-            <div class="portfolio portfolio--dark">
-                <div class="portfolio__container">
+            <section class="portfolio portfolio--dark">
+                <div class="portfolio__container -trans">
                     <div class="portfolio__one">
-                        <div class="content">
+                        <div class="content -trans">
                             <h2 class="content__over-title">Portfolio</h2>
-                            <h3 class="content__title">Latest Work</h3>
+                            <h3 class="content__title"><span>Latest Work</span></h3>
                         </div>
                         <a href="#" class="btn btn--dark">Explore More</a>
                     </div>
@@ -95,7 +101,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </section>
         </main>
         <footer class="footer">
             <div class="footer__container">
@@ -103,5 +109,6 @@
             </div>
         </footer>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
