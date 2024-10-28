@@ -69,56 +69,65 @@ h6 span{
 }
 
 // Transition Load
-.content.-trans{
-    .content__over-title{
-        transition: transform,opacity 1s,1s ease .3s;
-    }
-    .content__text,
-    & h2,
-    & span{
-        transform: translateY(50%);
-        visibility: hidden;
-        opacity: 0;
-    }
-    @for $i from 1 through 10 {
-        & span:nth-child(#{$i}) {
-            transition: transform,opacity 1s,1s ease .3s+($i*.3s);
+.-trans{
+    .content{
+        &__over-title{
+            transition: transform,opacity 1s,1s ease .3s;
+        }
+        &__text{
+            transition: transform,opacity 1s,1s ease 1.5s;
+        }
+        &__text,
+        h2,
+        span{
+            transform: translateY(50%);
+            visibility: hidden;
+            opacity: 0;
+        }
+        @for $i from 1 through 10 {
+            & span:nth-child(#{$i}) {
+                transition: transform,opacity 1s,1s ease .3s+($i*.3s);
+            }
         }
     }
-
-    &.active .content__text,
-    &.active h2,
-    &.active span{
-        visibility: visible;
-        transform: translateY(0);
-        opacity: 1;
-    }
-    .content__text{
-        transition: transform,opacity 1s,1s ease 1.5s;
-    }
-}
-.hero-colage.-trans{
-    transition: transform 1s ease 2s;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    &.active{
-        transform: rotateY(0deg);
-    }
-}
-.-trans .cards{
-    .cards__item a{
+    .hero-colage{
+        transition: transform 1s ease 2s;
         transform: rotateY(180deg);
         backface-visibility: hidden;
     }
-    @for $i from 1 through 30 {
-        .cards__item:nth-child(#{$i}) a{
-            transition: transform,opacity 2s,2s ease $i*.3s;
+    .portfolio__container{
+        .cards{
+            &__item a{
+                transform: rotateY(180deg);
+                backface-visibility: hidden;
+            }
+            @for $i from 1 through 30 {
+                &__item:nth-child(#{$i}) a{
+                    transition: transform,opacity 2s,2s ease $i*.3s;
+                }
+            }
         }
     }
-}
-.portfolio__container.active{
-    & .cards__item a{
-        transform: rotateY(0deg);
+    &.active{
+        .content{
+            &__text,
+            h2,
+            span{
+                visibility: visible;
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .hero-colage{
+            transform: rotateY(0deg);
+        }
+        .portfolio__container{
+            .cards__item{
+                a{
+                    transform: rotateY(0deg);
+                }
+            }
+        }
     }
 }
 
