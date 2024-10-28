@@ -112,7 +112,7 @@ h6 span{
     }
     @for $i from 1 through 30 {
         .cards__item:nth-child(#{$i}) a{
-            transition: transform,opacity 2s,2s ease .3s+($i*.3s);
+            transition: transform,opacity 2s,2s ease $i*.3s;
         }
     }
 }
