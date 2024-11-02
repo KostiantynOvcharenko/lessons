@@ -298,7 +298,7 @@ footer {
 }
 .get-started__btn:hover {
   color: #FFF;
-  transform: scale(1.5);
+  transform: scale(1.1);
   box-shadow: 3px 3px 3px #5C2000;
 }
 .get-started__btn:active {
@@ -379,6 +379,7 @@ footer {
 .events__second .cards__item .link {
   font-size: 16px;
   line-height: 200%; /* 32/16 */
+  align-self: flex-start;
 }
 .events__second .cards__item .link:hover {
   color: #EF6D58;

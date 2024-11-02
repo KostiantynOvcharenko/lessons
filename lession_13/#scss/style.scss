@@ -304,7 +304,7 @@ footer{
         line-height: 100%;
         &:hover{
             color: #FFF;
-            transform: scale(1.5);
+            transform: scale(1.1);
             box-shadow: 3px 3px 3px #5C2000;
         }
         &:active{
@@ -389,6 +389,7 @@ footer{
                 .link {
                     font-size: 16px;
                     line-height: 200%; /* 32/16 */
+                    align-self: flex-start;
                     &:hover{
                         color: #EF6D58;
                         text-decoration: underline;
