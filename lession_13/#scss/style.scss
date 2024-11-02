@@ -307,11 +307,11 @@ footer{
         line-height: 100%;
         &:hover{
             color: #FFF;
-            transform: scale(105%);
+            transform: scale(105deg);
             box-shadow: 3px 3px 3px #5C2000;
         }
         &:active{
-            transform: scale(100%);
+            transform: scale(100deg);
             box-shadow: 0 0 0;
 
         }
@@ -467,7 +467,7 @@ footer{
         .content{
             max-width: 531px;
             align-items: flex-start;
-            margin: 0 0 64pxpx 0
+            margin: 0 0 64px 0
         }
     }
     &__second {
