@@ -1,0 +1,48 @@
+@keyframes show-text{
+    0%{
+        transform: translateY(-50%);
+        opacity: 0;
+    }100%{
+        transform: translateY(0%);
+        opacity: 1;
+
+    }
+}
+@keyframes show-menu{
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }100%{
+        transform: translateX(0%);
+        opacity: 1;
+
+    }
+}
+@keyframes open-cards{
+    0%{
+        transform: rotateY(-180deg);
+    }100%{
+        transform: rotateY(0deg);
+    }
+}
+
+.portfolio .content .content__over-title{
+    transform: translateY(-50%);
+    opacity: 0;
+    animation: show-text .5s linear .3s forwards;
+}
+.portfolio .content .content__title{
+    transform: translateY(-50%);
+    opacity: 0;
+    animation: show-text .5s linear .8s forwards;
+}
+.portfolio .menu{
+    transform: translateX(100%);
+    opacity: 0;
+    animation: show-menu 1s cubic-bezier(.19,.37,.09,1.24) 1.3s forwards;
+}
+.portfolio .cards__item{
+    backface-visibility: hidden;
+    transform: rotateY(-180deg);
+    animation: open-cards 1s cubic-bezier(.19,.37,.09,1.24) 2.3s forwards;
+}
