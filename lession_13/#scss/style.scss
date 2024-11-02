@@ -161,7 +161,6 @@ footer{
     text-align: center;
     font-family: Epilogue;
     font-size: 14px;
-    font-style: normal;
     font-weight: 900;
     line-height: normal;
     text-transform: uppercase;
@@ -262,8 +261,6 @@ footer{
         top: 0;
         left: 0;
         transform: translate(88%, -50%);
-    }
-    &__container{
     }
     &__inner {
         border-radius: 6px;
@@ -377,9 +374,6 @@ footer{
                 .content {
                     align-items: flex-start;
                     row-gap: 19px;
-                    // &:not(:last-child){
-                    //     margin: 0 0 19px 0;
-                    // }
                     &__title {
                         font-size: 24px;
                         font-weight: 700;
@@ -452,11 +446,7 @@ footer{
         height: 48px;
     }
 }
-.link {
-}
 .team {
-    &__container {
-    }
     &__first {
         display: flex;
         justify-content: space-between;
@@ -467,7 +457,7 @@ footer{
         .content{
             max-width: 531px;
             align-items: flex-start;
-            margin: 0 0 64px 0
+            // margin: 0 0 64px 0
         }
     }
     &__second {
@@ -502,12 +492,7 @@ footer{
                     }
                 }
             }
-            &__image{
-
-            }
         }
-    }
-    &__bottom-navs {
     }
 }
 .arrow-btns {
@@ -555,8 +540,6 @@ footer{
         align-items: center;
         column-gap: 130px;
     }
-    &__first {
-    }
     &__image {
         width: 570px;
         height: 448px;
@@ -564,8 +547,15 @@ footer{
     &__second {
         position: relative;
         &::before{
-
+            content: url(../img/founder/quotes.svg);
+            position: absolute;
+            top: 3%;
+            right: 10%;
+            width: 100px;
+            height: 80px;
+            z-index: -1;
         }
+        position: relative;
         .content {
             align-items: flex-start;
             row-gap: 33px;

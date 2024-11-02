@@ -161,7 +161,6 @@ footer {
   text-align: center;
   font-family: Epilogue;
   font-size: 14px;
-  font-style: normal;
   font-weight: 900;
   line-height: normal;
   text-transform: uppercase;
@@ -450,7 +449,6 @@ footer {
 .team__first .content {
   max-width: 531px;
   align-items: flex-start;
-  margin: 0 0 64px 0;
 }
 .team__second .cards {
   margin: 0 0 60px 0;
@@ -484,6 +482,7 @@ footer {
   font-size: 16px;
   line-height: 32/16;
 }
+
 .arrow-btns {
   display: flex;
   -moz-column-gap: 16px;
@@ -537,6 +536,16 @@ footer {
 }
 .founder__second {
   position: relative;
+  position: relative;
+}
+.founder__second::before {
+  content: url(../img/founder/quotes.svg);
+  position: absolute;
+  top: 3%;
+  right: 10%;
+  width: 100px;
+  height: 80px;
+  z-index: -1;
 }
 .founder__second .content {
   align-items: flex-start;
