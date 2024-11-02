@@ -304,11 +304,11 @@ footer{
         line-height: 100%;
         &:hover{
             color: #FFF;
-            transform: scale(105deg);
+            transform: scale(1.5);
             box-shadow: 3px 3px 3px #5C2000;
         }
         &:active{
-            transform: scale(100deg);
+            transform: scale(1);
             box-shadow: 0 0 0;
 
         }
@@ -488,7 +488,7 @@ footer{
                     &__text {
                         color: rgba(255, 255, 255, 0.64);
                         font-size: 16px;
-                        line-height: 32/16
+                        line-height: 200%; /* 32/16 */
                     }
                 }
             }
