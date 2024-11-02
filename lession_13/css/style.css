@@ -522,6 +522,10 @@ footer {
 .founder__image {
   width: 570px;
   height: 448px;
+  border-radius: 6px;
+}
+.founder__image .img__img {
+  border: 1px solid #3A3C56;
 }
 .founder__second {
   position: relative;
