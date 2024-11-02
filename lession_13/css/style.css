@@ -73,22 +73,26 @@ footer {
   flex-direction: column;
 }
 
-[class*=__first] .content {
+.content {
   align-items: center;
   row-gap: 20px;
 }
-[class*=__first] .content__over-title {
+.content__over-title {
   color: #EF6D58;
   font-size: 16px;
   line-height: 200%; /* 32/16 */
   letter-spacing: 3px;
   text-transform: uppercase;
 }
-[class*=__first] .content__title {
+.content__title {
   font-size: 56px;
   font-weight: 800;
   line-height: 114.286%;
   letter-spacing: -1px;
+  text-align: center;
+}
+.content__title--left {
+  text-align: left;
 }
 
 .main__section-01 {
@@ -185,7 +189,9 @@ footer {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 32px;
 }
 .portfolio__second .cards__item {
   flex-basis: 470px;
@@ -212,7 +218,6 @@ footer {
   position: absolute;
   left: 48px;
   bottom: 12.259615%; /* 51/416 */
-  row-gap: 24px;
   align-items: flex-start;
   z-index: 1;
 }
@@ -220,6 +225,8 @@ footer {
   color: #391400;
   font-size: 16px;
   line-height: 200%; /* 32/16 */
+  text-transform: none;
+  letter-spacing: normal;
   padding: 5px 16px;
   border-radius: 19px;
   background: #FFF;
@@ -242,40 +249,50 @@ footer {
   height: 48px;
 }
 
-.get-started__container {
+.get-started {
+  position: relative;
+}
+.get-started::after {
+  content: url(../img/get-started/icons/star.svg);
+  height: 44.047619%; /* 148/336 */
+  aspect-ratio: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(88%, -50%);
+}
+.get-started__inner {
   border-radius: 6px;
   background: #FDF0E9;
   display: flex;
+  justify-content: center;
   -moz-column-gap: 38px;
        column-gap: 38px;
+  padding-left: 20px;
 }
-.get-started__inner {
+.get-started__left {
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-end;
   -moz-column-gap: 68px;
        column-gap: 68px;
   padding-block: 80px 64px;
 }
-.get-started__first {
-  padding-top: 12px;
-  padding-left: 100px;
-}
-.get-started__first .content {
+.get-started__left-top .content {
   max-width: 248px;
   align-items: flex-start;
   row-gap: 13px;
 }
-.get-started__first .content:not(:last-child) {
+.get-started__left-top .content:not(:last-child) {
   margin: 0 0 23px;
 }
-.get-started__first .content__title {
+.get-started__left-top .content__title {
   color: #391400;
   font-size: 24px;
   font-weight: 700;
   line-height: 133.333333%; /* 32px/24 */
+  letter-spacing: 0;
 }
-.get-started__first .content__btn {
+.get-started__btn {
   width: 154px;
   height: 48px;
   border-radius: 6px;
@@ -285,40 +302,39 @@ footer {
   font-weight: 900;
   line-height: 100%;
 }
-.get-started__first .content__btn:hover {
+.get-started__btn:hover {
+  color: #FFF;
   transform: scale(105%);
   box-shadow: 3px 3px 3px #5C2000;
 }
-.get-started__first .content__btn:active {
+.get-started__btn:active {
   transform: scale(100%);
   box-shadow: 0 0 0;
 }
-.get-started__second .img {
-  -o-object-fit: none;
-     object-fit: none;
-}
-.get-started__second-image {
+.get-started__envelop {
   position: relative;
   height: 192px;
   width: 338px;
+  border-radius: 6px;
+  box-shadow: 0px 24px 48px 0px rgba(85, 30, 0, 0.04);
 }
-.get-started__second-image img {
+.get-started__envelop img {
   position: absolute;
   left: 0;
   top: 0;
 }
-.get-started__third {
+.get-started__right {
   position: relative;
   width: 298px;
 }
-.get-started__third-image {
+.get-started__right-image {
   position: absolute;
   right: 0;
   bottom: 0;
   width: 239px;
   height: 396px;
 }
-.get-started__third-image::before {
+.get-started__right-image::before {
   content: url(../img/get-started/cloud.svg);
   position: absolute;
   right: 5.439331%; /* 13/239 */
@@ -350,18 +366,16 @@ footer {
   padding: 36px 40px;
   display: flex;
   flex-direction: column;
-  row-gap: 40px;
 }
-.events__second .cards__item .content:not(:last-child) {
-  margin: 0 0 19px 0;
+.events__second .cards__item .content {
+  align-items: flex-start;
+  row-gap: 19px;
 }
 .events__second .cards__item .content__title {
   font-size: 24px;
   font-weight: 700;
   line-height: 133.333333%; /* 32/24 */
-}
-.events__second .cards__item .content__title:not(:last-child) {
-  margin: 0 0 19px 0;
+  letter-spacing: 0;
 }
 .events__second .cards__item .content__text {
   color: rgba(255, 255, 255, 0.64);
@@ -379,6 +393,7 @@ footer {
 .events__second .cards__top {
   border-bottom: 1px solid #3A3C56;
   padding-bottom: 36px;
+  margin: 0 0 40px 0;
 }
 .events__second .cards__top-dt {
   margin: 0 0 8px 0;
@@ -388,7 +403,7 @@ footer {
   align-items: center;
 }
 .events__second .cards__top-dt:not(:last-child) {
-  margin: 0 0 19px 0;
+  margin: 0 0 8px 0;
 }
 .events__second .cards__top-dt-day {
   font-size: 72px;
@@ -415,6 +430,9 @@ footer {
 .events__second .cards__top-time::before {
   content: url(../img/events/icons/clock.svg);
 }
+.events__second .cards__bottom {
+  margin: 0 0 32px 0;
+}
 .events__button {
   width: 170px;
   height: 48px;
@@ -434,7 +452,7 @@ footer {
   margin: 0 0 64pxpx 0;
 }
 .team__second .cards {
-  margin: 0 0 52px 0;
+  margin: 0 0 60px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -451,12 +469,14 @@ footer {
   height: 272px;
 }
 .team__second .cards__item .content {
-  row-gap: 3px;
+  row-gap: 9px;
+  align-items: flex-start;
 }
 .team__second .cards__item .content__title {
   font-size: 24px;
   font-weight: 700;
   line-height: 133.333333%; /* 32/24 */
+  letter-spacing: normal;
 }
 .team__second .cards__item .content__text {
   color: rgba(255, 255, 255, 0.64);
@@ -501,4 +521,41 @@ footer {
 }
 .points__point:hover {
   background-color: #EF6D58;
+}
+
+.founder__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 130px;
+       column-gap: 130px;
+}
+.founder__image {
+  width: 570px;
+  height: 448px;
+}
+.founder__second {
+  position: relative;
+}
+.founder__second .content {
+  align-items: flex-start;
+  row-gap: 33px;
+}
+.founder__second .content__title {
+  font-size: 40px;
+  line-height: 120%; /* 48/40 */
+  letter-spacing: normal;
+}
+.founder__second .content__title:not(:last-child) {
+  margin-bottom: 15px;
+}
+.founder__second .content__text h4 {
+  font-size: 20px;
+  line-height: 160%; /* 32/20 */
+  margin: 0 0 6px 0;
+}
+.founder__second .content__text p {
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 14px;
+  line-height: 171.428571%; /* 24/14 */
 }/*# sourceMappingURL=style.css.map */
