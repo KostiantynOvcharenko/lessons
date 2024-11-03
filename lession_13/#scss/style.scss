@@ -66,18 +66,18 @@ footer{
 
 // content
 .content {
-    display: flex;
-    flex-direction: column;
 }
 .content{
-    align-items: center;
-    row-gap: 20px;
+    text-align: center;
     &__over-title {
         color: #EF6D58;
         font-size: 16px;
         line-height: 200%; /* 32/16 */
         letter-spacing: 3px;
         text-transform: uppercase;
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
     }
     &__title{
         font-size: 56px;
@@ -119,6 +119,7 @@ footer{
     display: flex;
     justify-content: center;
     column-gap: 60px;
+    flex-wrap: wrap;
     &__item {
         a{
             position: relative;
@@ -155,6 +156,7 @@ footer{
     }
 }
 .btn {
+    padding: 16px 30px;
     border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.30);
     color: #FFF;
@@ -164,9 +166,6 @@ footer{
     font-weight: 900;
     line-height: normal;
     text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: color, background-color .3s, .3s;
     &:hover{
         color: #EF6D58;
@@ -188,13 +187,21 @@ footer{
         .cards{
             display: flex;
             flex-flow: row wrap;
-            justify-content: space-between;
+            justify-content: center;
             column-gap: 30px;
             row-gap: 32px;
             &__item{
                 flex-basis: 470px;
-                height: 416px;
+                min-height: 416px;
                 position: relative;
+                @media (max-width: 1000px) {
+                    flex-grow: 1;
+                }
+                &:nth-child(4n+2),
+                &:nth-child(4n+3){
+                    flex-grow: 1;
+                }
+    
                 .img{
                     border-radius: 6px;
                     overflow: hidden;
@@ -205,6 +212,7 @@ footer{
                         position: absolute;
                         inset: 0;
                         background: #5C2000;                
+                        transition: opacity 1s;;
                         opacity: 0.3181;
                     }
                     &:hover::after {
@@ -212,12 +220,13 @@ footer{
                     }
                 }
                 .content{
+                    text-align: left;
                     position: absolute;
                     left: 48px;
                     bottom: 12.259615%; /* 51/416 */
-                    align-items: flex-start;
                     z-index: 1;
                     &__over-title{
+                        display: inline-block;
                         color: #391400;
                         font-size: 16px;
                         line-height: 200%; /* 32/16 */
@@ -235,40 +244,32 @@ footer{
                     }
                 }
             }
-            &__item:nth-child(4n+2),
-            &__item:nth-child(4n+3){
-                flex-grow: 1;
-            }
         }
     }
     &__third {
         display: flex;
         justify-content: center;
     }
-    &__btn {
-        width: 170px;
-        height: 48px;
-    }
 }
 
 .get-started {
-    position: relative;
-    &::after{
-        content: url(../img/get-started/icons/star.svg);
-        height: 44.047619%; /* 148/336 */
-        aspect-ratio: 1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(88%, -50%);
-    }
     &__inner {
+        padding-inline: 100px 80px;
+        position: relative;
+        &::after{
+            content: url(../img/get-started/icons/star.svg);
+            height: 44.047619%; /* 148/336 */
+            aspect-ratio: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(56%, -50%);
+        }
         border-radius: 6px;
         background: #FDF0E9;
         display: flex;
-        justify-content: center;
-        column-gap: 38px;
-        padding-left: 20px;
+        justify-content: space-between;
+        gap: 38px;
     }
     &__left {
         display: flex;
@@ -294,8 +295,6 @@ footer{
         }
     }
     &__btn{
-        width: 154px;
-        height: 48px;
         border-radius: 6px;
         background: #EF6D58;          
         color: #FFF;
@@ -325,32 +324,32 @@ footer{
             top: 0;;
         }
     }
+    &__middle{
+        padding-block: 80px;
+    }
     &__right {
         position: relative;
-        width: 298px;
+        flex: 0 0 298px;
         &-image {
             position: absolute;
             right: 0;
             bottom: 0;
-            width: 239px;
-            height: 396px;
-            &::before{
-                content: url(../img/get-started/cloud.svg);
-                position: absolute;
-                right: 5.439331%; /* 13/239 */
-                bottom: 11.868687%; /* 47/396 */
-                width: 282px;
-                height: 242px;
-            }
+        }
+        &::before{
+            content: url(../img/get-started/cloud.svg);
+            position: absolute;
+            right: 5.439331%; /* 13/239 */
+            bottom: 11.868687%; /* 47/396 */
+            width: 282px;
+            height: 242px;
         }
     }
 }
 .events {
     &__container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 64px;
+        & > div:not(:last-child){
+            margin-bottom: 64px;
+        }
     }
     &__first {
         &-inner{
@@ -363,37 +362,43 @@ footer{
     &__second {
         .cards{
             justify-content: space-between;
+            align-items: stretch;
             gap: 30px;
             &__item{
-                flex: 0 0 370px;
+                flex: 1 1 370px;
                 border-radius: 6px;
                 border: 1px solid #3A3C56;
-                padding: 36px 40px;
+                padding: 41px 36px;
                 display: flex;
                 flex-direction: column;
-                .content {
-                    align-items: flex-start;
-                    row-gap: 19px;
-                    &__title {
-                        font-size: 24px;
-                        font-weight: 700;
-                        line-height: 133.333333%; /* 32/24 */
-                        letter-spacing: 0;
-                    }
-                    &__text {
-                        color: rgba(255, 255, 255, 0.64);
-                        font-size: 16px;
-                        line-height: 200%; /* 32/16 */
-                    }
-                }
-                .link {
-                    font-size: 16px;
-                    line-height: 200%; /* 32/16 */
-                    align-self: flex-start;
-                    &:hover{
-                        color: #EF6D58;
-                        text-decoration: underline;
-                    }
+            }
+            &__bottom {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                row-gap: 19px;
+            }
+            &__title {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 133.333333%; /* 32/24 */
+                letter-spacing: 0;
+            }
+            &__text {
+                flex: 1 0 1px;
+                text-align: left;
+                color: rgba(255, 255, 255, 0.64);
+                font-size: 16px;
+                line-height: 200%; /* 32/16 */
+            }
+            &__link {
+                font-size: 16px;
+                line-height: 200%; /* 32/16 */
+                align-self: flex-start;
+                &:hover{
+                    color: #EF6D58;
+                    text-decoration: underline;
                 }
             }
             &__top {
@@ -434,31 +439,25 @@ footer{
                     }
                 }
             }
-            &__bottom {
-                margin: 0 0 32px 0;
-            }
         }
     
     }
-    &__third {
-    }
-    &__button {
-        width: 170px;
-        height: 48px;
+    &__third{
+        text-align: center;
     }
 }
 .team {
     &__first {
         display: flex;
         justify-content: space-between;
+        gap: 30ps;
         align-items: flex-end;
         &:not(:last-child){
             margin: 0 0 64px 0
         }
         .content{
             max-width: 531px;
-            align-items: flex-start;
-            // margin: 0 0 64px 0
+            text-align: left;
         }
     }
     &__second {
@@ -473,13 +472,8 @@ footer{
                 flex-direction: column;
                 row-gap: 26px;
                 align-items: flex-start;
-                .img{
-                    width: 270px;
-                    height: 272px;
-                }
                 .content {
-                    row-gap: 9px;
-                    align-items: flex-start;
+                    text-align: left;
                     &__title {
                         font-size: 24px;
                         font-weight: 700;
@@ -492,6 +486,12 @@ footer{
                         line-height: 200%; /* 32/16 */
                     }
                 }
+            }
+            &__image{
+                border-radius: 6px;
+                border: 1px solid #3A3C56;
+                width: 100%;
+                aspect-ratio: 1;
             }
         }
     }
@@ -539,17 +539,34 @@ footer{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        column-gap: 130px;
+        column-gap: 30px;
+    }
+    &__first{
+        position: relative;
+        flex-basis: 570px;
+        border-radius: 6px;
+        aspect-ratio: 570 / 448;
+        &::before{
+            content: url(../img/founder/background.png);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
     }
     &__image {
-        width: 570px;
-        height: 448px;
-        .img__img{
-            border-radius: 6px;
+        img{
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
         }
     }
     &__second {
-        position: relative;
+        flex-basis: 470px;
         &::before{
             content: url(../img/founder/quotes.svg);
             position: absolute;
@@ -561,8 +578,8 @@ footer{
         }
         position: relative;
         .content {
-            align-items: flex-start;
-            row-gap: 33px;
+            text-align: left;
+            margin: 0 0 44px 0;
             &__title{
                 font-size: 40px;
                 line-height: 120%; /* 48/40 */
