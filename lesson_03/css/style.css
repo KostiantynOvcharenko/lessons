@@ -1,0 +1,48 @@
+/* Test */
+@import "nullstyle.css";
+*{
+    color: #999999;
+}
+[class*="__container"]{
+    color: rgb(255, 1, 141);
+}
+.header p{
+    color: green;
+}
+.main{
+    color: rgb(255, 0, 0);
+}
+h1{
+    color: #900;
+}
+p.blue,
+.blue{
+    color: blue;
+}
+.green{
+    color: rgb(176, 224, 140);
+}
+.articles .articles__sub-title{
+    color: rgb(117, 0, 153);
+}
+.articles__text > p{
+    color: gold;
+}
+.articles__text-01 + p{
+    color: darkmagenta; 
+}
+.articles__text-02 ~ p{
+    color: rgb(0, 139, 113); 
+}
+li{
+    color: darkcyan;
+}
+li.item-02{
+    color: rgb(0, 139, 79);
+}
+.articles .item-03{
+    color: rgb(139, 0, 139);
+}
+.articles__numeric-item.item-04{
+    color: rgb(139, 0, 60);
+}
