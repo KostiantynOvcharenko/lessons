@@ -290,6 +290,7 @@ footer {
   visibility: hidden;
   opacity: 0;
   cursor: pointer;
+  transition: opacity .5s ease;
 }
 .checkbox__box:has(.checkbox__input:checked)::before{
   visibility: visible;
