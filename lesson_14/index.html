@@ -22,47 +22,110 @@
                 <div class="main__contacts">
                     <div class="contacts">
                         <div class="contacts__container">
-                            <form class="request" action="#">
-                                <div class="request__top">
+                            <div class="contacts__block">
+                                <div class="contacts__text">
                                     <p>There are many variations of passages of Lorem Ipsu available, but the majority have suffered alte.</p>
                                 </div>
-                                <ul class="request__fields">
-                                    <li class="request__field">
-                                        <label class="request__label" for="request-name">Name*</label>
-                                        <input class="request__input" id="request-name" type="text" name="form[name]" required>
-                                    </li>
-                                    <li class="request__field">
-                                        <label class="request__label" for="request-email">Email*</label>
-                                        <input class="request__input" id="request-email" type="email" name="form[email]" required>
-                                    </li>
-                                    <li class="request__field">
-                                        <label class="request__label" for="request-localion">Localion</label>
-                                        <input class="request__input" id="request-localion" type="text" name="form[localion]">
-                                    </li>
-                                    <li class="request__field request__field-spliter">
-                                        <ul class="request__fields request__fields-inline">
-                                            <li class="request__field">
-                                                <label class="request__label" for="request-budget">Budget*</label>
-                                                <input class="request__input" id="request-budget" type="text" name="form[budget]" required>
-                                            </li>
-                                            <li class="request__field">
-                                                <label class="request__label" for="request-subject">Subject*</label>
-                                                <input class="request__input" id="request-subject" type="text" name="form[subject]" required>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="request__field">
-                                        <label class="request__label" for="request-message">Message*</label>
-                                        <textarea class="request__input textarea" id="request-message" name="message" rows="1" required></textarea>
-                                    </li>
-                                </ul>
-                                <a href="#" class="request__btn">
-                                    <span class="request__btn-text">Submit</span>
-                                </a>
-                            </form>
+                                <form class="form" action="#">
+                                    <ul class="form__items">
+                                        <li class="form__item input">
+                                            <label class="input__label" for="input-name">Name*</label>
+                                            <div class="input__field">
+                                                <input class="input__input" id="input-name" type="text" name="form[name]" required>
+                                            </div>
+                                        </li>
+                                        <li class="form__item input">
+                                            <label class="input__label" for="input-email">Email*</label>
+                                            <div class="input__field">
+                                                <input class="input__input" id="input-email" type="email" name="form[email]" required>
+                                            </div>
+                                        </li>
+                                        <li class="form__item input">
+                                            <label class="input__label" for="input-location">Location</label>
+                                            <div class="input__field">
+                                                <input class="input__input" id="input-location" type="text" name="form[location]">
+                                            </div>
+                                        </li>
+                                        <li class="form__item form__item--split">
+                                            <ul class="form__items form__items--inline">
+                                                <li class="form__item input">
+                                                    <label class="input__label" for="input-budget">Budget*</label>
+                                                    <div class="input__field">
+                                                        <input class="input__input" id="input-budget" type="text" name="form[budget]" required pattern="\d{1,9}">
+                                                    </div>
+                                                </li>
+                                                <li class="form__item input">
+                                                    <label class="input__label" for="input-subject">Subject*</label>
+                                                    <div class="input__field">
+                                                        <input class="input__input" id="input-subject" type="text" name="form[subject]" required>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="form__item input">
+                                            <label class="input__label" for="input-message">Message*</label>
+                                            <div class="input__field">
+                                                <textarea class="input__input" id="input-message" type="text" name="form[message]" required></textarea>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <button class="form__submit" type="submit">
+                                        <span class="form__submit-text">Submit</span>
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- support -->
+                <div class="support main__support">
+                    <div class="support__container">
+                        <form class="form" action="#">
+                            <ul class="form__items">
+                                <li class="form__item input">
+                                    <label class="input__label" for="input-f-name">First Name</label>
+                                    <div class="input__field">
+                                        <input class="input__input" id="input-f-name" type="text" name="form[f-name]" placeholder="Enter First Name" required>
+                                    </div>
+                                </li>
+                                <li class="form__item input">
+                                    <label class="input__label" for="input-s-name">Last Name</label>
+                                    <div class="input__field">
+                                        <input class="input__input" id="input-s-name" type="text" name="form[s-name]" placeholder="Enter Last Name" required>
+                                    </div>
+                                </li>
+                                <li class="form__item input">
+                                    <label class="input__label" for="input-cemail">Email</label>
+                                    <div class="input__field">
+                                        <input class="input__input" id="input-cemail" type="email" name="form[emailinput-email]" placeholder="Enter your Email" required>
+                                    </div>
+                                </li>
+                                <li class="form__item input">
+                                    <label class="input__label" for="input-phone">Phone Number</label>
+                                    <div class="input__field">
+                                        <input class="input__input" id="input-phone" type="tel" name="form[phone]" placeholder="Enter Phone Number" required>
+                                    </div>
+                                </li>
+                                <li class="form__item input">
+                                    <label class="input__label" for="input-smessage">Message</label>
+                                    <div class="input__field">
+                                        <textarea class="input__input" id="input-smessage" name="form[message]" placeholder="Enter your Message" required rows="4"></textarea>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="form__footer">
+                                <div class="form__checkbox-container checkbox">
+                                    <div class="checkbox__box">
+                                        <input class="checkbox__input" id="support-checkbox" type="checkbox" name="checkbox"  value="1" required>
+                                    </div>
+                                    <label class="checkbox__label" for="support-checkbox">I agree with Terms of Use and Privacy Policy</label>
+                                </div>
+                                <button class="form__submit" type="submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /support -->
             </main>
             <footer class="footer">
                 <div class="footer__container">
