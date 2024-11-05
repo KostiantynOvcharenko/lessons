@@ -1,0 +1,41 @@
+@keyframes show-blur{
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
+.main__contacts::after,
+.main__contacts::before{
+    opacity: 0;
+    animation: show-blur 1s linear .5s forwards;
+}
+
+.request .request__btn{
+    position: relative;
+    transition: no;
+    overflow: hidden;
+}
+.request .request__btn::after,
+.request__btn-text{
+    position: relative;
+    z-index: 1;
+}
+.request .request__btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(90deg, #8431CC 0%, #8431CC 70%, rgba(0, 0, 0, 0) 90%, rgba(255, 255, 255, 0.6) 100%);
+    transform: skew(-30deg) translate(-100%, -25%);
+    will-change: left;
+    transition: left 1s;
+}
+.request .request__btn:hover::before{
+    left: 150%;
+}
+.request .request__btn:hover{
+    background-color: #A53DFF;
+}  
