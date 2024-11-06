@@ -173,7 +173,7 @@ footer {
   align-items: center;
 }
 .contacts .form__cell--group .input:first-child{
-  flex-basis: 28%;
+  flex-basis: 36%;
 }
 .contacts .form__cell--group .input:not(:first-child){
   flex-grow: 1;
