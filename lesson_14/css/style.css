@@ -167,15 +167,15 @@ footer {
   outline-style: dashed;
   color: #000;
 }
-.contacts .form__cell--inline{
+.contacts .form__cell--group{
   display: flex;
   column-gap: 24px;
   align-items: center;
 }
-.contacts .form__cell--inline .input:first-child{
+.contacts .form__cell--group .input:first-child{
   flex-basis: 28%;
 }
-.contacts .form__cell--inline .input:not(:first-child){
+.contacts .form__cell--group .input:not(:first-child){
   flex-grow: 1;
 }
 .form textarea{
