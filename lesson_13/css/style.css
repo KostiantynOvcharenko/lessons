@@ -1,5 +1,5 @@
 @import url("nullstyle.css");
-@import url("animation.css");
+@import url("media.css");
 @import url(https://fonts.googleapis.com/css?family=Epilogue:regular,800,900&display=swap);
 /*
 text-dark: #391400;
@@ -92,28 +92,33 @@ footer {
 .content__title--left {
   text-align: left;
 }
-
 .main__section-01 {
   margin: 0 0 192px;
 }
 .main__section-02 {
+  display: none;
   margin: 0 0 140px;
 }
 .main__section-03 {
+  display: none;
   margin: 0 0 140px;
 }
 .main__section-04 {
+  display: none;
   margin: 0 0 180px;
 }
 .main__section-05 {
+  display: none;
   margin: 0 0 176px;
 }
 
 .menu {
+  max-width: 574px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
-  -moz-column-gap: 60px;
-       column-gap: 60px;
+  justify-content: space-between;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   flex-wrap: wrap;
 }
 .menu__item a {
@@ -134,7 +139,6 @@ footer {
 .menu__item a:hover {
   color: #fff;
 }
-
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -194,11 +198,6 @@ footer {
   min-height: 416px;
   position: relative;
 }
-@media (max-width: 1000px) {
-  .portfolio__second .cards__item {
-    flex-grow: 1;
-  }
-}
 .portfolio__second .cards__item:nth-child(4n+2), .portfolio__second .cards__item:nth-child(4n+3) {
   flex-grow: 1;
 }
@@ -247,7 +246,6 @@ footer {
   display: flex;
   justify-content: center;
 }
-
 .get-started__inner {
   padding-inline: 100px 80px;
   position: relative;
@@ -584,4 +582,58 @@ footer {
   color: rgba(255, 255, 255, 0.64);
   font-size: 14px;
   line-height: 171.428571%; /* 24/14 */
+}
+
+@media (max-width: 1010px) {
+  .portfolio__second .cards__item {
+    flex-grow: 1;
+  }
+}
+@media (max-width: 767.98px) {
+  .content__over-title {
+    flex: 14;
+  }
+  .content__over-title:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .content__title {
+    font-size: 46px;
+  }
+  .menu {
+    max-width: 360px;
+    -moz-column-gap: 9px;
+         column-gap: 9px;
+  }
+  .menu a {
+    font-size: 14px;
+    line-height: 171%; /* 11/10 */
+  }
+  .menu span {
+    font-size: 10px;
+    line-height: 110%; /* 11/10 */
+  }
+  .main__section-01 {
+    margin: 0 0 50px;
+  }
+  .portfolio {
+    padding-top: 40px;
+  }
+  .portfolio .portfolio__first,
+  .portfolio .portfolio__first-title {
+    margin-bottom: 20px;
+  }
+  .portfolio__second {
+    margin: 0 0 32px 0;
+  }
+  .portfolio__second .cards__item .content {
+    left: 30px;
+    bottom: 5%;
+  }
+  .portfolio__second .cards__item .content__over-title {
+    font-size: 14px;
+    padding-block: 5px;
+  }
+  .portfolio__second .cards__item .content__title {
+    font-size: 28px;
+  }
 }/*# sourceMappingURL=style.css.map */
