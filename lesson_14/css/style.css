@@ -245,6 +245,9 @@ footer {
   border: 1px solid #262626;
   background: #141414;  
 }
+.support .input__input.input__input--textarea{
+  min-height: 123px;
+}
 .support .form__footer{
   display: flex;
   gap: 20px;
