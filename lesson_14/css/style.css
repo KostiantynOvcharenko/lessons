@@ -313,6 +313,12 @@ footer {
 }
 
 
+@media (max-width: 1017.98px){
+  .main__contacts::before,
+  .main__contacts::after{
+    display: none;
+  }
+}
 @media (max-width: 767.98px){
   .contacts .input__input:focus{
     outline: none;
