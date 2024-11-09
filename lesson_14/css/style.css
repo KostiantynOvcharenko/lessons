@@ -109,8 +109,6 @@ footer {
   z-index: -2;
 }
 .contacts__text{
-  font-size: 18px;
-  line-height: 133.333333%; /* 24/18 */
   margin-bottom: 50px;
 }
 
@@ -314,12 +312,21 @@ footer {
 
 
 @media (max-width: 1017.98px){
+  .main__contacts{
+    padding-block: 50px;
+  }
   .main__contacts::before,
   .main__contacts::after{
     display: none;
   }
+  .contacts__block {
+    padding: 50px 20px;
+  }
 }
 @media (max-width: 767.98px){
+  .main__contacts{
+    padding-block: 20px;
+  }
   .contacts .input__input:focus{
     outline: none;
   }
@@ -328,7 +335,7 @@ footer {
     line-height: normal;
   }
   .contacts__block {
-    padding: 50px 10px;
+    padding: 20px 10px;
   }
   .contacts .form__cell--group {
     display: block;
