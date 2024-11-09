@@ -128,10 +128,6 @@ footer {
 .contacts .form__elements{
   margin-bottom: 50px;
 }
-.contacts .form__cell:not(:last-child){
-  margin-bottom: 23px;
-}
-
 .contacts .input{
   position: relative;
   padding-bottom: 14px;
@@ -140,6 +136,9 @@ footer {
   display: flex;
   align-items: center;
   column-gap: 10px;
+  margin-bottom: 23px;
+}
+.contacts .input:not(:last-child){
 }
 .contacts .input:hover,
 .contacts .input:has(.input__input:focus){
@@ -156,8 +155,6 @@ footer {
   left: 0;
   bottom: 14px;
   color: #697484;
-  font-size: 18px;
-  line-height: 133.333333%; /* 24/18 */
   transition: color, translate .5s,.5s;
 }
 .contacts .input:has(input:not(:placeholder-shown)) > .input__label,
@@ -234,6 +231,7 @@ footer {
 .support .form__elements{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 50px;
   margin-bottom: 50PX;
 }
@@ -261,7 +259,9 @@ footer {
 }
 .support .form__footer{
   display: flex;
-  gap: 20px;
+  column-gap: 20px;
+  row-gap: 30px;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -312,3 +312,22 @@ footer {
   outline-style: dashed;
 }
 
+
+@media (max-width: 767.98px){
+  .contacts{
+    font-size: 14px;
+    line-height: normal;
+  }
+  .contacts__block {
+    padding: 50px 10px;
+  }
+  .contacts .form__cell--group {
+    display: block;
+  }
+  .support .form{
+    padding: 50px 10px 20px;
+  }
+  .support .form__cell{
+    flex-grow: 1;
+  }  
+}
