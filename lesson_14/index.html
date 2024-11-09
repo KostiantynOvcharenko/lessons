@@ -31,39 +31,38 @@
                                         <div class="form__cell input">
                                             <label class="input__label" for="input-name">Name*</label>
                                             <div class="input__field">
-                                                <input class="input__input" id="input-name" type="text" name="form[name]" required>
+                                                <input class="input__input" id="input-name" type="text" name="form[name]" required placeholder="">
                                             </div>
                                         </div>
                                         <div class="form__cell input">
                                             <label class="input__label" for="input-email">Email*</label>
                                             <div class="input__field">
-                                                <input class="input__input" id="input-email" type="email" name="form[email]" required>
+                                                <input class="input__input" id="input-email" type="email" name="form[email]" required placeholder="">
                                             </div>
                                         </div>
                                         <div class="form__cell input">
                                             <label class="input__label" for="input-location">Location</label>
                                             <div class="input__field">
-                                                <input class="input__input" id="input-location" type="text" name="form[location]">
+                                                <input class="input__input" id="input-location" type="text" name="form[location]" placeholder="">
                                             </div>
                                         </div>
                                         <div class="form__cell form__cell--group">
                                             <div class="input">
                                                 <label class="input__label" for="input-budget">Budget*</label>
                                                 <div class="input__field">
-                                                    <input class="input__input" id="input-budget" type="text" name="form[budget]" required pattern="\d{1,9}">
+                                                    <input class="input__input" id="input-budget" type="text" name="form[budget]" required pattern="\d{1,9}" placeholder="">
                                                 </div>
                                             </div>
                                             <div class="input">
                                                 <label class="input__label" for="input-subject">Subject*</label>
                                                 <div class="input__field">
-                                                    <input class="input__input" id="input-subject" type="text" name="form[subject]" required>
+                                                    <input class="input__input" id="input-subject" type="text" name="form[subject]" required placeholder="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form__cell input">
-                                            <label class="input__label" for="input-message">Message*</label>
                                             <div class="input__field">
-                                                <textarea class="input__input" id="input-message" name="form[message]" required></textarea>
+                                                <textarea class="input__input" id="input-message" name="form[message]" required placeholder="Message*"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -107,16 +106,14 @@
                                 <div class="form__cell input">
                                     <label class="input__label" for="input-smessage">Message</label>
                                     <div class="input__field">
-                                        <textarea class="input__input input__input--textarea" id="input-smessage" name="form[message]" placeholder="Enter your Message" required rows="4"></textarea>
+                                        <textarea class="input__input input__input--textarea" id="input-smessage" name="form[message]" placeholder="Enter your Message" rows="4"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="form__footer">
-                                <div class="form__checkbox-container checkbox">
-                                    <div class="checkbox__box">
-                                        <input class="checkbox__input" id="support-checkbox" type="checkbox" name="checkbox"  value="1" required>
-                                    </div>
-                                    <label class="checkbox__label" for="support-checkbox">I agree with Terms of Use and Privacy Policy</label>
+                                <div class="checkbox">
+                                    <input class="checkbox__input" id="checkbox-01" type="checkbox" name="checkbox"  value="1" required>
+                                    <label class="checkbox__label" for="checkbox-01">I agree with Terms of Use and Privacy Policy</label>
                                 </div>
                                 <button class="form__submit" type="submit">Send Message</button>
                             </div>

@@ -81,6 +81,7 @@ footer {
 /* Contacts */
 .main__contacts{
   padding-block: 100px;
+  font-size: 18px;
 }
 .main__contacts::before{
   content: '';
@@ -132,6 +133,7 @@ footer {
 }
 
 .contacts .input{
+  position: relative;
   padding-bottom: 14px;
   border-bottom: #E6E8EB 1px solid;
   transition: border-color .5s;
@@ -139,19 +141,28 @@ footer {
   align-items: center;
   column-gap: 10px;
 }
+.contacts .input:hover,
 .contacts .input:has(.input__input:focus){
   border-color: #A53DFF;
+}
+.contacts .input:hover .input__label{
+  color: #A53DFF;
 }
 .contacts .input:last-child{
   padding-bottom: 16px;
 }
 .contacts .input__label{
+  position: absolute;
+  left: 0;
+  bottom: 14px;
   color: #697484;
   font-size: 18px;
   line-height: 133.333333%; /* 24/18 */
-  transition: color .5s;
+  transition: color, translate .5s,.5s;
 }
+.contacts .input:has(input:not(:placeholder-shown)) > .input__label,
 .contacts .input:has(.input__input:focus) > .input__label{
+  transform: scale(60%) translateY(-150%);
   color: #A53DFF;
 }
 .contacts .input__field{
@@ -254,47 +265,40 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
-.checkbox{
-  display: flex;
-  align-items: center;
-  gap: 10px;
+
+
+
+/* Checkbox */
+.checkbox__input {
+  appearance: none;
 }
-.support .checkbox__box{
-  position: relative;
+.checkbox__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+.checkbox__label::before {
+  content: "";
+  flex-shrink: 0;
   width: 28px;
   aspect-ratio: 1;
   border-radius: 4px;
-  border: 1px solid #262626;
-  background: #141414; 
+  border: 1px #262626 solid;
+  background: #0F0F0F;
 }
-.support .checkbox__box::before{
-  content: url(../img/check.png);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity .5s ease;
+.checkbox__input:checked + .checkbox__label::before {
+  transition: background-color .3s;
+  background: #999 url(../img/check-back.png) center /
+  contain no-repeat;
 }
-.checkbox__box:has(.checkbox__input:checked)::before{
-  visibility: visible;
-  opacity: 1;
+.checkbox__input:focus-visible + .checkbox__label {
+  outline: 2px solid #262626 ;
+  border-radius: 5px;
 }
-.support .checkbox__label{
-  cursor: pointer;
-}
-.support .checkbox__input{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
+
+
+
 .support .form__submit{
   padding: 18px 24px;
   border-radius: 8px;
@@ -307,3 +311,4 @@ footer {
   outline-offset: 5px;
   outline-style: dashed;
 }
+
