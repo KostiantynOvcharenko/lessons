@@ -398,6 +398,7 @@ footer{
         .cards{
             justify-content: space-between;
             align-items: stretch;
+            flex-wrap: nowrap;
             gap: 30px;
             &__item{
                 flex: 1 1 370px;
@@ -696,6 +697,9 @@ footer{
 }
     
 @media (max-width: 991.98px){
+    .content__title{
+        font-size: 34px;
+    }
     .get-started__inner{
         padding-inline: 25px;
     }
@@ -705,15 +709,70 @@ footer{
     .get-started__right-cloud {
         max-width: 250px;
     }    
+    .events__second .cards__top-dt-day {
+        font-size: 54px;
+    }    
+    .events__second .cards__top-dt-str {
+        font-size: 18px;
+    }    
+    .events__second .cards__top-time {
+        font-size: 13px;
+    }
+    .events__second .cards__title{
+        font-size: 18px;
+    }      
+    .events__second .cards__text{
+        font-size: 12px;
+    }
+    .events__second .cards__link{
+        font-size: 14px;
+    }
+    .events__second .cards__top {
+        padding-bottom: 10px;
+        margin: 0 0 12px 0;
+    }
+    .events__second .cards__item {
+        flex: 1 1 280px;
+        padding: 20px;
+    }
 }
 @media (max-width: 767.96px){
     .get-started__inner::after {
         width: 95px;
     }    
-    .get-started__envelop {
-        // max-width: 100px;
-        // aspect-ratio: 192 / 338;
+    .events__second .cards__top-dt-day {
+        font-size: 32px;
+    }    
+    .events__second .cards__top-dt-str {
+        font-size: 12px;
+        padding-block: 0;
+    }    
+    .events__second .cards__top-time {
+        font-size: 10px;
     }
+    .events__second .cards__title{
+        font-size: 13px;
+    }      
+    .events__second .cards__text{
+        font-size: 10px;
+    }
+    .events__second .cards__link{
+        font-size: 12px;
+    }
+    .events__second .cards__top {
+        padding-bottom: 10px;
+        margin: 0 0 12px 0;
+    }
+    .events__second .cards__item {
+        flex: 1 1 280px;
+        padding: 10px;
+    }
+    .events__second .cards__bottom {
+        row-gap: 10px;
+    }
+    .events__second .cards{
+        gap: 10px;
+    }    
 }
 @media (max-width: 452px){
     .get-started__right-girl {
@@ -722,4 +781,36 @@ footer{
     .get-started__right-cloud {
         max-width: 190px;
     }
+    .events__second .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 20px;
+    }
+    .events__second .cards__top-dt-day {
+        font-size: 54px;
+    }    
+    .events__second .cards__top-dt-str {
+        font-size: 18px;
+    }    
+    .events__second .cards__top-time {
+        font-size: 13px;
+    }
+    .events__second .cards__title{
+        font-size: 18px;
+    }      
+    .events__second .cards__text{
+        font-size: 12px;
+    }
+    .events__second .cards__link{
+        font-size: 14px;
+    }
+    .events__second .cards__top {
+        padding-bottom: 10px;
+        margin: 0 0 12px 0;
+    }
+    .events__second .cards__item {
+        flex: 0 1 340px;
+        padding: 20px;
+    }
+
 }
