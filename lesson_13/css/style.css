@@ -534,13 +534,7 @@ footer {
   flex-basis: 570px;
   border-radius: 6px;
   aspect-ratio: 570/448;
-}
-.founder__first::before {
-  content: url(../img/founder/background.png);
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background: url(../img/founder/background.png) center/cover no-repeat;
 }
 .founder__image img {
   position: absolute;
@@ -568,10 +562,12 @@ footer {
   text-align: left;
   margin: 0 0 44px 0;
 }
-.founder__second .content__title {
-  font-size: 40px;
-  line-height: 120%; /* 48/40 */
-  letter-spacing: normal;
+@media (min-width: 990px) {
+  .founder__second .content__title {
+    font-size: 40px;
+    line-height: 120%; /* 48/40 */
+    letter-spacing: normal;
+  }
 }
 .founder__second .content__title:not(:last-child) {
   margin-bottom: 15px;
