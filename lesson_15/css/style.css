@@ -42,6 +42,28 @@ body {
   min-height: 52px;
   z-index: 99;
 }
+.main__container{
+  position: relative;
+  padding-block: 10px;
+}
+.out-target{
+  position: relative;
+  padding-left: 40px;
+  line-height: 1;
+}
+.out-target::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(../img/must-watch//icons/arrow-left.svg) center / contain no-repeat;
+  margin-right: 10px;
+  height: 100%;
+  aspect-ratio: 1;
+}
+.out-target:hover{
+  text-decoration: underline;
+}
 
 .header__container {
   position: relative;
@@ -87,7 +109,7 @@ footer {
   align-items: center;  
 }
 .img img{
-  max-width: 100%;
+  width: 100%;
   max-height: 100%;
   object-fit: contain;  
 }
@@ -289,8 +311,13 @@ footer {
   flex-wrap: wrap;
   gap: 5px;
   margin: 0 0 2px 0;
+  overflow: hidden;
+}
+.card__subcards:hover::after{
+  transform: translateY(-100%) scale(.5);
 }
 .card__subcards::after{
+  transition: transform .5s;
   content: '';
   position: absolute;
   inset: 0;
@@ -299,7 +326,7 @@ footer {
   background: linear-gradient(180deg, rgba(26, 26, 26, 0.00) 0%, #1A1A1A 101.79%);  
 }
 .subcard{
-  flex: 1 0 104px;
+  flex: 1 0 48%;
 }
 .subcard img{
   border-radius: 10px;
