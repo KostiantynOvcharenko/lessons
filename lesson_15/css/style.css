@@ -93,16 +93,19 @@ footer {
 }
 
 /* Must Watch */
-.main__must-watch{
+.section-main{
   margin-block: 50px;
 }
-.must-watch{}
-.must-watch__inner{
+.section-main{}
+.section-main__container{}
+.section-main__inner{
+  position: relative;
   border-radius: 12px;
   border: 1px solid #262626;
   padding: 50px;
 }
-.must-watch__top{
+.section-main__top{
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,14 +113,14 @@ footer {
   flex-wrap: wrap;
   margin: 0 0 50px 0;
 }
-.must-watch__title{}
+.section-main__title{}
 .title{
   color: #FFF;
   font-size: 38px;
   font-weight: 700;
   line-height: 150%; /* 57px */
 }
-.must-watch__navs{
+.section-main__navs{
   flex-basis: 257px;
 }
 .slide-nav{
@@ -185,27 +188,27 @@ footer {
 .slide-nav__label--start{}
 
 
-.must-watch__items{
+.section-main__items{
   display: flex;
   gap: 20px;
 }
-.must-watch__item{
+.section-main__item{
   padding: 20px;
   flex: 1 0 0;  
   border-radius: 12px;
   border: 1px solid #262626;
   background: #1A1A1A;  
 }
-.must-watch__item-top{
+.card__item-top{
   border-radius: 12px;
   overflow: hidden;
   aspect-ratio: 320 / 404;
   margin: 0 0 20px 0;
 }
-.must-watch__item-top.img{
+.card__item-top.img{
   transform: scale(1.02);
 }
-.must-watch__info{
+.card__info{
   color: #999;
   font-size: 16px;
   font-weight: 500;
@@ -215,7 +218,7 @@ footer {
   flex-wrap: wrap;
   gap: 10px;
 }
-.must-watch__info-time{
+.card__info-time{
   display: flex;
   padding: 6px 10px 6px 6px;
   align-items: center;
@@ -224,16 +227,16 @@ footer {
   border: 1px solid #262626;
   background: #141414;  
 }
-.must-watch__info-time::before{
+.card__info-time::before{
   content: '';
   background: url(../img/must-watch/icons/clock.svg) center/contain no-repeat;
   width: 24px;
   aspect-ratio: 1;
 }
-.must-watch__info-right{
+.card__info-right{
   border-radius: 51px;
-  border: 1px solid var(--Black-15, #262626);
-  background: var(--Black-08, #141414);  
+  border: 1px solid #262626;
+  background: #141414;  
 }
 .raiting{
   display: flex;
@@ -246,7 +249,7 @@ footer {
   background:  linear-gradient(to right, #E50000 0 90%, #999 90% 100%)
   /* background:  #E50000; */
 }
-.must-watch__item:nth-child(even) .raiting__stars{
+.section-main__item:nth-child(even) .raiting__stars{
   background:  linear-gradient(to right, #E50000 0 80%, #999 80% 100%)
 }
 .raiting__star{
@@ -259,28 +262,91 @@ footer {
   font-size: 14px;
 }
 
+
+.section-main__btn{
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 150%;
+  padding: 10px 24px;
+  border-radius: 8px;
+  background: var(--Red-45, #E50000);
+  position: absolute;
+  top: -50px;
+  transform: translateY(-50%);
+  left: 0;
+}
+.section-main__items--five{
+  gap: 30px;
+}
+.section-main__items--five .section-main__item{
+  padding: 30px;
+}
+
+
+.card__subcards{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 0 0 2px 0;
+}
+.card__subcards::after{
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.00) 0%, #1A1A1A 101.79%);  
+}
+.subcard{
+  flex: 1 0 104px;
+}
+.subcard img{
+  border-radius: 10px;
+}
+.card__info-arrow{
+  width: 30px;
+  aspect-ratio: 1;
+  background: url(../img/must-watch/icons/arrow-left.svg) center/contain no-repeat;
+  transform: rotate(180deg);
+}
+.card__info-arrow:hover{
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+
 @media (max-width: 1199.98px){
-  .must-watch__items{
+  .section-main__items{
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 50px;
   }
-  .must-watch__item{
+  .section-main__item{
     flex: 0 1 359px;
   }
-  .must-watch__top{
+  .section-main__top{
     justify-content: space-around;
   }
-  .must-watch__inner{
+  .section-main__inner{
     padding: 20px;
   }
-  .must-watch__navs.slide-nav{
-    min-width: 100%;
+  .section-main__btn{
+    top: -20px;
+  }
+  .section-main__navs.slide-nav{
+    min-width: 30%;
   }
 }
 @media (max-width: 991.98px) {
-  .must-watch__inner{
+  .section-main__navs.slide-nav{
+    min-width: 80%;
+  }
+  .section-main__inner{
     padding: 10px;
+  }
+  .section-main__btn{
+    top: -10px;
   }
   .title{
     font-size: 28px;

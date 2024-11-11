@@ -1,0 +1,29 @@
+.card{
+    position: relative;
+    transition: none;
+    overflow: hidden;
+}
+.card::after,
+.card-text{
+    position: relative;
+    z-index: 1;
+}
+.card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    transform: skew(-30deg) translate(-100%, -25%);
+    will-change: left;
+    background: linear-gradient(90deg, transparent 0%, transparent 70%, rgba(0, 0, 0, 0) 90%, rgba(255, 255, 255, 0.6) 100%);
+}
+.card:hover::before{
+    left: 150%;
+    transition: left 1s;
+}
+.card::before{
+}
+.card:hover::before{
+}  
