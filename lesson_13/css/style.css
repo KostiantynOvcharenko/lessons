@@ -428,7 +428,7 @@ footer {
 .team__first {
   display: flex;
   justify-content: space-between;
-  gap: 30ps;
+  gap: 30px;
   align-items: flex-end;
 }
 .team__first:not(:last-child) {
