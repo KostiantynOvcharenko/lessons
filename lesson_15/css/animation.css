@@ -23,7 +23,27 @@
     left: 150%;
     transition: left 1s;
 }
-.card::before{
+.btn{
+    position: relative;
+    transition: none;
+    overflow: hidden;
 }
-.card:hover::before{
-}  
+.btn__text{
+    position: relative;
+    z-index: 1;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    transform: skew(-30deg) translate(-100%, -25%);
+    will-change: left;
+    background: linear-gradient(90deg, #c50000 0%, #c50000 70%, rgba(0, 0, 0, 0) 90%, rgba(255, 255, 255, 0.6) 100%);
+}
+.btn:hover::before{
+    left: 150%;
+    transition: left 1s;
+}
