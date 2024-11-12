@@ -11,7 +11,7 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 150%; /* 57px */
-  background: var(--Black-08, #141414);  
+  background: #141414;  
 }
 .wrapper {
 	min-height: 100%;
@@ -305,7 +305,7 @@ footer {
 }
 
 
-.card__subcards{
+.section-main__subcards{
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -313,10 +313,10 @@ footer {
   margin: 0 0 2px 0;
   overflow: hidden;
 }
-.card__subcards:hover::after{
+.section-main__subcards:hover::after{
   transform: translateY(-100%) scale(.5);
 }
-.card__subcards::after{
+.section-main__subcards::after{
   transition: transform .5s;
   content: '';
   position: absolute;
