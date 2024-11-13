@@ -1,4 +1,13 @@
 window.onload = () =>{
+    // burger-menu
+    document.addEventListener("click", function (e) {
+        const targetElement = e.target;
+        if (targetElement.closest('.icon-menu')) {
+            document.documentElement.classList.toggle('open-menu');
+            e.preventDefault();
+        }
+    })
+    //=================================================
     const options ={
         root: null,
         rootMargin: '0px',
@@ -8,7 +17,6 @@ window.onload = () =>{
         entries.forEach(entry=>{
             if(entry.isIntersecting){
                 const trans = entry.target;
-                console.log(trans);
                 trans.classList.add('active')
                 observer.unobserve(trans);
             }
@@ -18,3 +26,4 @@ window.onload = () =>{
         observer.observe(target);
     })
 }
+
