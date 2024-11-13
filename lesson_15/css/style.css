@@ -360,7 +360,7 @@ footer {
   background: url(../img/must-watch/icons/arrow-left.svg) center/contain no-repeat;
   transform: rotate(180deg);
 }
-.section-main__card-info-arrow{
+.section-main__card-info-arrow:hover{
   border: 1px solid #999;
   border-radius: 5px;
 }
