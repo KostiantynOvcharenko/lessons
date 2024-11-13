@@ -325,10 +325,10 @@ footer {
   height: 100%;
   background: linear-gradient(180deg, rgba(26, 26, 26, 0.00) 0%, #1A1A1A 101.79%);  
 }
-.subcard{
+.section-main__subcard{
   flex: 1 0 48%;
 }
-.subcard img{
+.section-main__subcard img{
   border-radius: 10px;
 }
 .card__info-arrow{
