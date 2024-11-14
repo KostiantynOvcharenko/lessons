@@ -317,7 +317,7 @@ h6 span {
 }
 .-trans.active .hero-colage {
   transform: rotateY(0deg);
-  aspect-ratio: 1;
+  /* aspect-ratio: 1; */
 }
 .-trans.active .portfolio__container .cards__item a {
   transform: rotateY(0deg);
@@ -421,7 +421,8 @@ h6 span {
   padding-top: 50%;
   position: relative;
   height: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 329/334;
+  /* aspect-ratio: 1; */
 }
 
 .hero-colage {
@@ -689,14 +690,14 @@ h6 span {
     font-size: 10px;
   }
   .-trans.active .hero-colage {
-    height: 70%;
+    /* height: 70%; */
   }  
   .content {
     font-size: 11px;
     line-height: 150%;
   }
   [class*=__container] {
-    padding-inline: 10px;  
+    padding-inline: 23px;  
   }
   .content > *:not(:last-child) {
     margin: 0 0 15px 0;
@@ -756,6 +757,15 @@ h6 span {
   }
 }
 @media (max-width: 479.98px) {
+  .hero{
+    padding-block: 50px 100px;
+  }
+  .hero__one{
+    order: 2;
+  }
+  .hero__two{
+    order: 1;
+  }
   .hero__two{
     width: 100%;
   }
@@ -767,25 +777,37 @@ h6 span {
     justify-content: center;
   }
   .-trans.active .hero-colage {
-    height: 100%;
+    height: auto;
+    width: 100%;
   }
-  .portfolio .content__title,
+  .content__over-title{
+    font-size: 16px;
+    line-height: 200%; /* 32/16 */
+  }
   .content__title{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    font-size: 56px;
+    line-height: 114.285714%; /* 64/56 */
   }    
+  .content__text{
+    font-size: 16px;
+    line-height: 200%; /* 32/16 */
+  }
   .link-group{
     display: flex;
     justify-content: space-around;
     gap: 20px;
   }
   .link-group .btn {
-    padding: 22px;
+    padding: 18px 23px;
     font-size: 14px;
+    line-height: normal;
   }
   .link {
     font-size: 16px;
+    line-height: 200%; /* 32/16 */
   }
   .hero__one > div:not(:last-child) {
     margin: 0 0 30px 0;
@@ -793,4 +815,7 @@ h6 span {
   .content > *:not(:last-child) {
     margin: 0 0 20px 0;
   }    
+  .footer{
+    font-size: 10px;
+  }
 }
