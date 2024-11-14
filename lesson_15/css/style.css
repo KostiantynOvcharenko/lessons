@@ -401,4 +401,8 @@ footer {
   .title{
     font-size: 28px;
   }
+  .section-main__btn{
+    font-size: 14px;
+    padding: 10px 15px;
+  }
 }
