@@ -326,7 +326,7 @@ h6 span {
 /* hero */
 .hero {
   padding-block: 100px;
-  min-height: 702px;
+  /* min-height: 702px; */
 }
 
 .hero__container {
@@ -699,10 +699,10 @@ h6 span {
     padding-inline: 10px;  
   }
   .content > *:not(:last-child) {
-    margin: 0 0 5px 0;
+    margin: 0 0 15px 0;
   }  
   .hero__one > div:not(:last-child) {
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
   }  
   .hero {
     padding-block: 30px;
@@ -755,6 +755,9 @@ h6 span {
   }
 }
 @media (max-width: 479.98px) {
+  .hero__two{
+    width: 100%;
+  }
   .portfolio__one .content {
     padding-right: 0;
   }  
@@ -770,5 +773,23 @@ h6 span {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+  }    
+  .link-group{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .link-group .btn {
+    padding: 22px;
+    font-size: 14px;
+  }
+  .link {
+    font-size: 16px;
+  }
+  .hero__one > div:not(:last-child) {
+    margin: 0 0 30px 0;
+  }
+  .content > *:not(:last-child) {
+    margin: 0 0 20px 0;
   }    
 }
