@@ -104,11 +104,12 @@ footer{
     &__section{
         // portfolio
         &-01{
-            margin: 0 0 192px;
+            margin: 0 0 52px;
         }
         // get-started
         &-02{
-            margin: 0 0 140px;
+            // margin: 0 0 140px;
+            padding-block: 140px;
         }
         // events
         &-03{
@@ -131,10 +132,13 @@ footer{
     justify-content: space-between;
     column-gap: 20px;
     flex-wrap: wrap;
+    &__item.menu__item--active{
+        color: #fff;
+    }
     &__item {
-        a{
-            position: relative;
-            color: rgba(255, 255, 255, 0.64);
+    a{
+        position: relative;
+        color: rgba(255, 255, 255, 0.64);
             font-size: 16px;
             line-height: 200%; /* 32px/16 */
         }
@@ -172,7 +176,8 @@ footer{
     position: relative;
     &__img {
         position: absolute;
-        inset: 0;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -224,12 +229,15 @@ footer{
                 &:nth-child(4n+3){
                     flex-grow: 1;
                 }
-    
+                
                 .img{
                     border-radius: 6px;
                     overflow: hidden;
                     position: absolute;
                     inset: 0;
+                    display: flex;
+                    align-items: flex-end;
+                    padding: 50px;
                     &::after{
                         content: '';
                         position: absolute;
@@ -242,12 +250,13 @@ footer{
                         opacity: 0;
                     }
                 }
+                &__image{
+                    
+                }
                 .content{
                     text-align: left;
-                    position: absolute;
-                    left: 48px;
-                    bottom: 12.259615%; /* 51/416 */
-                    z-index: 1;
+                    position: relative;
+                    z-index: 2;
                     &__over-title{
                         display: inline-block;
                         color: #391400;
@@ -299,7 +308,7 @@ footer{
         background: #FDF0E9;
     }
     &__left {
-        max-width: 653px;
+        // max-width: 653px;
         padding-block: 80px 64px;
         display: flex;
         flex-flow: row wrap;
@@ -362,11 +371,6 @@ footer{
         top: 0;
         right: 0;
         height: 100%;
-        &-image {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-        }
         &-girl{
             position: relative;
             z-index: 1;
@@ -484,7 +488,7 @@ footer{
     &__first {
         display: flex;
         justify-content: space-between;
-        gap: 30ps;
+        gap: 30px;
         align-items: flex-end;
         &:not(:last-child){
             margin: 0 0 64px 0
@@ -690,10 +694,6 @@ footer{
     .portfolio__second {
         margin: 0 0 32px 0;
     }
-    .portfolio__second .cards__item .content {
-        left: 30px;
-        bottom: 5%;
-    }    
     .portfolio__second .cards__item .content__over-title {
         font-size: 14px;
         padding-block: 5px;
@@ -788,6 +788,17 @@ footer{
     .get-started__right-cloud {
         max-width: 190px;
     }
+    .portfolio__second .cards__item .img{
+        padding: 25px;
+    }
+    .portfolio__second .cards__item .content__over-title {
+        font-size: 12px;
+        padding-block: 4px;
+    }
+    .portfolio__second .cards__item .content__title {
+        font-size: 24px;
+    }
+
     .events__second .cards {
         flex-wrap: wrap;
         justify-content: center;
