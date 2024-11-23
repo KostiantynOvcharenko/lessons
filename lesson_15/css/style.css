@@ -46,25 +46,6 @@ body {
   position: relative;
   padding-block: 10px;
 }
-.out-target{
-  position: relative;
-  padding-left: 40px;
-  line-height: 1;
-}
-.out-target::before{
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: url(../img/must-watch//icons/arrow-left.svg) center / contain no-repeat;
-  margin-right: 10px;
-  height: 100%;
-  aspect-ratio: 1;
-}
-.out-target:hover{
-  text-decoration: underline;
-}
-
 .header__container {
   position: relative;
   display: flex;
@@ -116,7 +97,7 @@ footer {
 
 /* Must Watch */
 .section-main{
-  margin-block: 50px;
+  padding-block: 50px;
 }
 .section-main{}
 .section-main__container{}
@@ -222,7 +203,8 @@ footer {
 }
 .section-main__item{
   padding: 20px;
-  flex: 1 0 0;  
+  /* flex: 1 0 0;   */
+  flex: 0 1 calc(100% / 4 - ((20px * 3) / 4));
   border-radius: 12px;
   border: 1px solid #262626;
   background: #1A1A1A;  
@@ -304,7 +286,7 @@ footer {
   left: 0;
 }
 .section-main__items--five{
-  gap: 30px;
+  /* gap: 30px; */
 }
 .section-main__items--five .section-main__item{
   padding: 30px;
@@ -370,10 +352,10 @@ footer {
   .section-main__items{
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 50px;
+    /* column-gap: 50px; */
   }
   .section-main__item{
-    flex: 0 1 359px;
+      flex: 0 1 calc(100% / 3 - ((20px * 2) / 3)); /* Зменшуємо кількість карток на рядку до 3 для екрану меншого розміру */
   }
   .section-main__top{
     justify-content: space-around;
@@ -389,6 +371,9 @@ footer {
   }
 }
 @media (max-width: 991.98px) {
+  .section-main__item{
+    flex: 0 1 calc(100% / 2 - ((20px * 1) / 2)); /* Зменшуємо кількість карток на рядку до 2 для ще меншого екрану */
+  }
   .section-main__navs.slide-nav{
     min-width: 80%;
   }
