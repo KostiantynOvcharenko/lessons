@@ -268,7 +268,7 @@ body {
 .portfolio--page .card__name{
   z-index: 3;
 }
-.portfolio__paginator{
+.portfolio__pagination{
   display: flex;
   justify-content: center;
   gap: 8px;
