@@ -1,0 +1,121 @@
+@import url("nullstyle.css");
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular,500,700&display=swap);
+
+body {
+  font-family: "Epilogue", sans-serif;
+  font-size: 16px;
+  line-height: 200%; /* 32/16 */
+  font-weight: 400;
+  background: #444;
+  color: rgba(255, 255, 255, 0.64);
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main{
+  flex-grow: 1;
+}
+[class*=__container] {
+  max-width: 1320px;
+  padding-inline: 20px;
+  box-sizing: content-box;
+  margin: auto;
+}
+
+
+.header{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.64);
+  padding: 10px;
+}
+.header:not(:last-child){
+  margin-bottom: 50px;
+}
+.header__container{
+  display: flex;
+  align-items: center;
+}
+.header__title{
+  flex-grow: 1;
+  text-align: center;
+  font-size: 24px;
+}
+.footer{
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.64);
+  padding: 10px;
+}
+
+.main__section{
+  margin-bottom: 50px;
+} 
+
+.main__section{
+}
+.cards{
+  background-color: #fff;
+  padding-block: 30px;
+  
+  
+}
+.cards__container{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+}
+.cards__box{
+  gap: 20px;
+  display: grid;
+  grid-template-rows: repeat(18, 1fr);
+  grid-auto-flow: column;
+  padding-block: 10px;
+  flex-basis: 49%;
+  flex-grow: 1;
+}
+.cards__item{
+  /* max-width: 304px; */
+  width: 100%;
+  align-self: stretch;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.cards__item--blue{
+  aspect-ratio: 304 / 184;
+  grid-row: span 7;
+  background-color: #2D9DB6;
+}
+.cards__item--cian{
+  aspect-ratio: 304 / 296;
+  grid-row: span 11;
+  background-color: #740E5E;
+}
+.cards__item--green{
+  grid-row: span 6;
+  aspect-ratio: 304 / 152;
+  background-color: #1E731D;
+}
+.cards__item--brown{
+  grid-row: span 18;
+  aspect-ratio: 304 / 504;
+  background-color: #736638;
+}
+
+.image{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1199.98px){}
+@media (max-width: 991.98px) {}
+@media (max-width: 767.98px) {}
+@media (max-width: 479.98px) {
+  .cards__box{
+    grid-auto-flow: row;
+  }
+}
