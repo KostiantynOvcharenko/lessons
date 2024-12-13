@@ -1,0 +1,54 @@
+@import url("nullstyle.css");
+
+body {
+  font-family: "Epilogue", sans-serif;
+  font-size: 16px;
+  line-height: 200%; /* 32/16 */
+  font-weight: 400;
+  background: #444;
+  color: rgba(255, 255, 255, 0.64);
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main{
+  flex-grow: 1;
+}
+[class*=__container] {
+  max-width: 1320px;
+  padding-inline: 20px;
+  box-sizing: content-box;
+  margin: auto;
+}
+
+
+.header{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.64);
+  padding: 10px;
+}
+.header:not(:last-child){
+  margin-bottom: 50px;
+}
+.header__container{
+  display: flex;
+  align-items: center;
+}
+.header__title{
+  flex-grow: 1;
+  text-align: center;
+  font-size: 24px;
+}
+.header__menu{
+  transition: all 1.3s;
+}
+.header__menu:hover a{
+  text-decoration: underline;
+  text-shadow: 1px 2px 5px;
+}
+.footer{
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.64);
+  padding: 10px;
+}
