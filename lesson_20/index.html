@@ -89,21 +89,21 @@
                                 <div class="user__image img">
                                     <img src="img/user/user.jpg" alt="A man in a jacket">
                                 </div>
-                                <ul class="user__socials">
+                                <ul class="user__socials socials">
                                     <li>
-                                        <a class="icon-soc icon-soc--facebook" href="#" aria-label="go to facebook profile"></a>
+                                        <a class="socials__icon socials__icon--facebook" href="#" aria-label="go to facebook profile"></a>
                                     </li> 
                                     <li>
-                                        <a class="icon-soc icon-soc--dribble" href="#" aria-label="go to dribble profile"></a>
+                                        <a class="socials__icon socials__icon--dribble" href="#" aria-label="go to dribble profile"></a>
                                     </li> 
                                     <li>
-                                        <a class="icon-soc icon-soc--instagram" href="#" aria-label="go to instagram profile"></a>
+                                        <a class="socials__icon socials__icon--instagram" href="#" aria-label="go to instagram profile"></a>
                                     </li> 
                                     <li>
-                                        <a class="icon-soc icon-soc--linkedin" href="#" aria-label="go to linkedin profile"></a>
+                                        <a class="socials__icon socials__icon--linkedin" href="#" aria-label="go to linkedin profile"></a>
                                     </li> 
                                     <li>
-                                        <a class="icon-soc icon-soc--behance" href="#" aria-label="go to behance profile"></a>
+                                        <a class="socials__icon socials__icon--behance" href="#" aria-label="go to behance profile"></a>
                                     </li> 
                                 </ul>
                             </div>
@@ -124,8 +124,10 @@
                     </div>
                 </section>
                 <!-- /user -->
-                <div class="main__blur main__blur--gray"></div>
-                <div class="main__blur main__blur--yellow"></div>
+                <div class="main__blur-cian"></div>
+                <div class="main__blur-green"></div>
+                <div class="main__blur-gray"></div>
+                <div class="main__blur-yellow"></div>
             </div>
             <!-- work -->
             <section class="work main__section main__section--work">
@@ -398,10 +400,10 @@
                                 </a>
                             </li>
                         </ul>
-                        <div class="blog__slider-nav">
-                            <span class="blog__slider-nav-point active"></span>
-                            <span class="blog__slider-nav-point"></span>
-                            <span class="blog__slider-nav-point"></span>
+                        <div class="blog-nav">
+                            <span class="blog-nav__point active"></span>
+                            <span class="blog-nav__point"></span>
+                            <span class="blog-nav__point"></span>
                         </div>
                     </div>
                 </div>
@@ -454,19 +456,198 @@
             </section>
             <!-- /what -->
             <!-- clients -->
-            <section class="clients main__clients">
-                <div class="clients__container">
-                    <h2 class="clients__title title">Happy Clients</h2>
-                    <div class="clients__text">
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+            <div class="main__wrapper">
+                <section class="clients main__section main__section--clients">
+                    <div class="clients__container">
+                        <h2 class="clients__title title">Happy Clients</h2>
+                        <div class="clients__text">
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                        </div>
+                        <ul class="clients__list">
+                            <li class="clients__one img">
+                                <img src="img/clients/google.svg" alt="Google logotype">
+                            </li>
+                            <li class="clients__one img">
+                                <img src="img/clients/dribbble.svg" alt="Google logotype">
+                            </li>
+                            <li class="clients__one img">
+                                <img src="img/clients/linkedin.svg" alt="Google logotype">
+                            </li>
+                            <li class="clients__one img">
+                                <img src="img/clients/amazon.svg" alt="Google logotype">
+                            </li>
+                            <li class="clients__one img">
+                                <img src="img/clients/medium.svg" alt="Google logotype">
+                            </li>
+                            <li class="clients__one img">
+                                <img src="img/clients/spotify.svg" alt="Google logotype">
+                            </li>
+                        </ul>
                     </div>
-                </div>
-            </section>
-            <!-- /clients -->
+                </section>
+                <!-- /clients -->
+                <!-- testimonial -->
+                <section class="testimonial main__section main__section--testimonial">
+                    <div class="testimonial__container">
+                        <h2 class="testimonial__title title">Testimonial</h2>
+                        <div class="testimonial__text">
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                        </div>
+                        <div class="testimonial__window">
+                            <ul class="testimonial__list">
+                                <li class="testimonial__item">
+                                    <div class="testimonial__comment">
+                                        <p>“Nulla efficitur nisl sit amet velit malesuada dapibus. Duis mollis felis turpis, nec semper odio convallis at. Curabitur imperdiet semper arcu, a finibus arcu suscipit in. Donec quis placerat nibh.</p>
+                                        <p> Maecenas est purus, eleifend ac cursus sed, tincidunt ut sapien.</p>
+                                        <p>Morbi ornare elit at libero suscipit porta.”</p>
+                                        <div class="testimonial__author">
+                                            <strong>Esther Howard</strong>
+                                        </div>
+                                        <div class="testimonial__position">Managing Director, ABC company</div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="blog-nav">
+                                <span class="blog-nav__point active"></span>
+                                <span class="blog-nav__point"></span>
+                                <span class="blog-nav__point"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__blur-yellow-b"></div>
+                </section>
+                <!-- /testimonial -->
+                <!-- contact -->
+                <section class="contact main__section  main__section--contact">
+                    <div class="contact__container">
+                        <div class="contact__first">
+                            <h2 class="contact__title title">Let’s discuss your Project</h2>
+                            <div class="contact__text">
+                                <p>There are many variations of passages of Lorem Ipsu available. but the majority have suffered alte.</p>
+                            </div>
+                            <ul class="contact__locations">
+                                <li class="contact__location">
+                                    <a class="point"  href="#">
+                                        <span class="pointer"></span>
+                                        <dl class="point__content">
+                                            <dt>Address:</dt>
+                                            <dd>
+                                                <address>New Mexico 31134</address>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li class="contact__location">
+                                    <a class="point"  href="mailto:mymail@mail.com">
+                                        <span class="pointer"></span>
+                                        <dl class="point__content">
+                                            <dt>My Email:</dt>
+                                            <dd>mymail@mail.com</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li class="contact__location">
+                                    <a class="point"  href="tel:+00123400000">
+                                        <span class="pointer"></span>
+                                        <dl class="point__content">
+                                            <dt>Call Me Now:</dt>
+                                            <dd>00-1234 00000</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="point__socials socials">
+                                <li>
+                                    <a class="socials__icon socials__icon--facebook" href="#" aria-label="go to facebook profile"></a>
+                                </li> 
+                                <li>
+                                    <a class="socials__icon socials__icon--dribble" href="#" aria-label="go to dribble profile"></a>
+                                </li> 
+                                <li>
+                                    <a class="socials__icon socials__icon--behance" href="#" aria-label="go to behance profile"></a>
+                                </li> 
+                                <li>
+                                    <a class="socials__icon socials__icon--instagram" href="#" aria-label="go to instagram profile"></a>
+                                </li> 
+                                <li>
+                                    <a class="socials__icon socials__icon--linkedin" href="#" aria-label="go to linkedin profile"></a>
+                                </li> 
+                            </ul>
+                        </div>
+                        <div class="contact__second">
+                            <div class="contact__text">
+                                <p>There are many variations of passages of Lorem Ipsu available. but the majority have suffered alte.</p>
+                            </div>
+                            <form class="contact__form" action="/">
+                                <ul class="contact__form-list">
+                                    <li class="contact__form-item">
+                                        <input class="contact__input" id="contact-name" type="text" placeholder="" required>
+                                        <label class="contact__label" for="contact-name">Name*</label>
+                                    </li>
+                                    <li class="contact__form-item">
+                                        <input class="contact__input" id="contact-email" type="email" placeholder=""  required>
+                                        <label class="contact__label" for="contact-email">Email*</label>
+                                    </li>
+                                    <li class="contact__form-item">
+                                        <input class="contact__input" id="contact-location" type="text" placeholder="">
+                                        <label class="contact__label" for="contact-location">Location</label>
+                                    </li>
+                                    <li class="contact__form-item contact__form-item--left">
+                                        <input class="contact__input" 
+                                        id="contact-budget" type="text" placeholder="" required>
+                                        <label class="contact__label" for="contact-budget">Budget*</label>
+                                    </li>
+                                    <li class="contact__form-item contact__form-item--right">
+                                        <input class="contact__input" id="contact-subject" type="text" placeholder="" required>
+                                        <label class="contact__label" for="contact-subject">Subject*</label>
+                                    </li>
+                                    <li class="contact__form-item">
+                                        <textarea class="contact__input" id="contact-message" placeholder="" required></textarea>
+                                        <label class="contact__label" for="contact-message">Message*</label>
+                                    </li>
+                                </ul>
+                                <button class="btn btn--submit" type="submit">
+                                    <span>Submit</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- /contact -->
         </main>
         <footer class="footer">
             <div class="footer__container">
-                <div class="logo"></div>
+                <div class="footer__logo logo">
+                    <div class="logo__icon">B</div>
+                    <div class="logo__title">Brooklyn</div>
+                </div>
+                <nav class="footer__menu">
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Home</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">About</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Process</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Portfolio</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Blog</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Services</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__copy">Copyright © 2022 Picto.</div>
             </div>
         </footer>
     </div>
