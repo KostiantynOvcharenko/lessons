@@ -45,7 +45,7 @@ body {
   line-height: 150%;
   padding: 0.75em 1.5em;
   border-radius: 0.25em;
-  background: var(--Primary-500, #A53DFF);
+  background: var(--Primary-500, #A53DFF, #A53DFF);
   transition: background .3s;
   width: fit-content;
 }
@@ -54,9 +54,9 @@ body {
 }
 .btn--lite{
   border-radius: 0.25rem;
-  border: 0.0625rem solid var(--Primary-500, #A53DFF);
+  border: 0.0625rem solid var(--Primary-500, #A53DFF, #A53DFF);
   background: var(--Gray-White, #FFF, #FFF);
-  color: var(--Primary-500, #A53DFF);
+  color: var(--Primary-500, #A53DFF, #A53DFF);
 }
 .btn--lite:hover{
   color: var(--Gray-White, #FFF);
@@ -107,7 +107,7 @@ body {
   width: 56px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: var(--Primary-500, #A53DFF);  
+  background: var(--Primary-500, #A53DFF, #A53DFF);  
   color: var(--Gray-White, #FFF, #FFF);
   font-size: 1.5rem;
   font-weight: 500;
@@ -133,11 +133,11 @@ body {
   font-size: 1rem;
   padding: 0.75em 1.5em;
   border-radius: 4px;
-  color: var(--Gray-333);
+  color: var(--Gray-333, #333);
   transition: background, color .3s, .3s;
 }
 .menu__item:hover{
-  background: var(--Primary-500, #A53DFF);  
+  background: var(--Primary-500, #A53DFF, #A53DFF);  
   color: var(--Gray-White, #FFF, #FFF);
 }
 .menu__link{
@@ -206,7 +206,7 @@ body {
     flex-direction: column;
     align-items: flex-end;
     border-radius: 2px;
-    background: var(--Primary-500);
+    background: var(--Primary-500, #A53DFF);
     transition: transform .3s;
     z-index: 10;
   }
@@ -307,7 +307,7 @@ body {
   z-index: -1;
   width: 100%;
   height: 50%;
-  background: var(--Red-10);
+  background: var(--Red-10, #FFC8C8);
 }
 .hello{
   position: relative;
@@ -416,7 +416,7 @@ body {
   aspect-ratio: 424 / 468;
   border-radius: 0.625rem;
   border: 0.0625rem solid var(--Gray-50, #F0F1F3);
-  background: var(--Gray-50);
+  background: var(--Gray-50, #697484);
 }
 .user__second{
   max-width: 33.625em;
@@ -478,7 +478,7 @@ body {
   transition: background-color .3s;
 }
 .socials__icon:hover{
-  background-color: var(--Primary-500, #A53DFF);
+  background-color: var(--Primary-500, #A53DFF, #A53DFF);
 }
 .socials__icon--facebook{
   background-image: url(../img/user/icons/facebook.svg);
@@ -572,7 +572,7 @@ body {
   margin-bottom: 2em;
 }
 .work__card:hover .work__icon {
-  background-color: var(--Primary-500, #A53DFF);
+  background-color: var(--Primary-500, #A53DFF, #A53DFF);
 }
 .w-icon{
   padding: 1.25em;
@@ -786,7 +786,7 @@ body {
   margin-bottom: 0.5rem;
 }
 .b-card__text{
-  color: var(--Gray-333);
+  color: var(--Gray-333, #333);
   font-weight: 500;
   /* font-size: 1.125em;
   line-height: 133.333%; */
@@ -853,7 +853,7 @@ body {
 }
 .what__card:hover{
   box-shadow: 0px 2rem 6rem 0px rgba(28, 25, 25, 0.16);
-  border-color: var(--Primary-500);
+  border-color: var(--Primary-500, #A53DFF);
 }
 .what__card-title{
   font-size: 1.5rem;
@@ -1023,7 +1023,7 @@ body {
   transition: background .3s;
 }
 .point:hover .pointer{
-  background: var(--Primary-500, #A53DFF);
+  background: var(--Primary-500, #A53DFF, #A53DFF);
 }
 .pointer::before{
   content: '';
@@ -1088,7 +1088,7 @@ body {
   margin-bottom: 1.5em;
 }
 .contact__form-item:hover{
-  border-color: var(--Primary-500, #A53DFF);
+  border-color: var(--Primary-500, #A53DFF, #A53DFF);
 }
 .contact__label{
   position: absolute;
@@ -1097,7 +1097,7 @@ body {
   transition: color, transform .3s, .3s;
 }
 .contact__form-item:hover .contact__label{
-  color: var(--Primary-500, #A53DFF);
+  color: var(--Primary-500, #A53DFF, #A53DFF);
 }
 .contact__input:not(:placeholder-shown) + .contact__label,
 .contact__input:focus + .contact__label{
@@ -1107,7 +1107,7 @@ body {
 .contact__input{
 }
 .contact__input:focus{
-  outline: var(--Primary-500, #A53DFF) 1px dashed;
+  outline: var(--Primary-500, #A53DFF, #A53DFF) 1px dashed;
 
 }
 .contact__form-item--split{}
@@ -1141,7 +1141,7 @@ body {
   flex-wrap: wrap;
 }
 .footer__menu .menu__item{
-  color: var(--Gray-50);
+  color: var(--Gray-50, #697484);
 }
 .menu{}
 .menu__item{}
