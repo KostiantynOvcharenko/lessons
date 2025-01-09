@@ -108,7 +108,7 @@ body {
   aspect-ratio: 1;
   border-radius: 50%;
   background: var(--Primary-500,  #A53DFF);  
-  color: var(--Gray-White, #FFF, #FFF);
+  color: var(--Gray-White, #FFF);
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 233.333333%; /* 56/24 */
